@@ -1,0 +1,38 @@
+@import './../base/common';
+@import './../base/utilities';
+
+$themes: (
+  light: (
+    primary: #ff0000,
+    text-base: #212121,
+    text-primary:#030303,
+    text-secondary:#64748b,
+    icon-primary: #606060,
+    icon-secondary: #909090,
+    accent: #065fd4,
+    background: #fff,
+    background-hover: rgba(0,0,0,0.05),
+    border-primary:#cbd4db,
+    border-secondary:#e8ecee
+  ),
+  dark: (
+    primary: #ff0000,
+    text-base: #fff,
+    text-primary:#fff,
+    text-secondary:#AAAAAA,
+    icon-primary: #fff,
+    icon-secondary: #909090,
+    accent: #3EA6FF,
+    background: #212121,
+    background-hover: rgba(255,255,255,0.1),
+    border-primary: #4e4e4e,
+    border-secondary: rgba(255,255,255,0.1)
+  )
+);
+
+
+// Utilities Theme
+@include utilities-theme($themes);
+
+// Common Theme
+@include common-theme($themes);

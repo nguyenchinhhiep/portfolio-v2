@@ -1,0 +1,69 @@
+$primary-text:#27303f;
+$secondary-text: #64748b;
+
+// Variables
+$primary: #27303f;
+$secondary: #64748b;
+$accent: #6875f5;
+$success: #45d3a3;
+$info: #45b0da;
+$danger: #fa4e4e;
+$warning: #f4b707;
+
+/*---COLORS---*/
+
+$white: #ffffff;
+$white1: #f2f3f8;
+$white2: #e4e8f0;
+$white3: #f2f7f8;
+$white4: #cccccc;
+$white5: #dddddd;
+$gray: #98a8b4;
+$gray1: #eeeeee;
+$gray2: #aea9c3;
+$gray3: #94a4b0;
+$dark: #2c304d;
+$dark2: #252946;
+$dark3: #40545a;
+$green: #5cb85c;
+$green1: #60c400;
+$blue: #009efb;
+$darkGreenMercon: #007d4c;
+$grayMercon: #54667a;
+$lightGreenMercon: #a3cf60;
+$lightRedMercon: #de544f;
+$yellowMercon: #ffce00;
+$orangeMercon: #f68932;
+$blackMercon: #000000;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #868e96;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+$blue: #0073dd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #e83e8c;
+$red: #dc3545;
+$orange: #fd7e14;
+$yellow: #ffc107;
+$green: #28a745;
+$teal: #20c997;
+$cyan: #17a2b8;
+
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800
+);

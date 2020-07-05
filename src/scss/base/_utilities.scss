@@ -1,0 +1,77 @@
+@mixin utilities-theme($theme) {
+
+  @each $theme, $value in $themes {
+      $background: map-get($value, background );
+      $background-hover: map-get($value, background-hover );
+      $primary: map-get($value, primary );
+      $text-base: map-get($value, text-base);
+      $text-primary: map-get($value, text-primary);
+      $text-secondary: map-get($value, text-secondary );
+      $accent: map-get($value, accent);
+      $icon-primary: map-get($value, icon-primary);
+      $icon-secondary: map-get($value, icon-secondary);
+      $border-primary: map-get($value, border-primary);
+      $border-secondary: map-get($value, border-secondary);
+
+      .#{$theme} {
+
+         .border-primary {
+           border-color: $border-primary !important;
+         }
+
+         .border-secondary {
+            border-color: $border-secondary !important;
+         }
+
+         .icon-primary {
+           color: $icon-primary !important;
+         }
+
+         .icon-secondary {
+           color: $icon-secondary !important;
+         }
+
+         .text-base {
+           color: $text-base !important;
+         }
+
+         .text-primary {
+           color: $text-primary !important;
+         }
+
+         .text-secondary {
+           color: $text-secondary !important;
+         }
+
+         .primary {
+          color: $primary !important;
+        }
+
+        .secondary {
+         color: $text-secondary !important;
+        }
+
+        .accent {
+          color: $accent !important;
+        }
+
+        .background {
+          background-color: $background !important;
+        }
+
+        .background-hover:hover {
+          background-color: $background-hover !important;
+        }
+      }
+       
+  }
+  
+}
+
+.box-shadow-custom {
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}

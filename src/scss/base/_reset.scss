@@ -1,0 +1,66 @@
+// Reset margin, padding,...
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+
+  :focus {
+    outline: none !important;
+  }
+}
+
+// Text rendering & box sizing
+* {
+  text-rendering: optimizeLegibility;
+  -o-text-rendering: optimizeLegibility;
+  -ms-text-rendering: optimizeLegibility;
+  -moz-text-rendering: optimizeLegibility;
+  -webkit-text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+  box-sizing: border-box;
+
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+// Images
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: top;
+  border: none;
+}
+
+// Input
+input {
+  border: none;
+  padding: 0 16px;
+}
+
+// List style
+ul {
+  list-style: none;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  // border: solid 1px #c8cedb;
+  -webkit-text-fill-color: #666;
+  font-size: 14px;
+  transition: background-color 5000s ease-in-out 0s;
+}

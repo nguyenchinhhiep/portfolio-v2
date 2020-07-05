@@ -1,0 +1,24 @@
+//  Author: Nguyen Chinh Hiep
+//  Email: nguyenchinhhiep95@gmail.com
+//  Facebook: facebook.com/hiepnguyen1003
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+@mixin common-theme($theme) {
+
+  @each $theme, $value in $themes {
+      $background: map-get($value, background );
+      $text-base: map-get($value, text-base);
+      
+
+      body.#{$theme} {
+        background-color: $background;
+        color: $text-base;
+      }
+       
+  }
+  
+}
