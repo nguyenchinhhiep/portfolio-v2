@@ -5,16 +5,16 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/portfolio',
     pathMatch: 'full'
   },
   {
-    path: 'home',
-    loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
+    path: 'portfolio',
+    loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
   },
   {
     path: '**',
-    redirectTo: '/home',
+    redirectTo: '/portfolio',
     pathMatch: 'full' 
   }
 ];
