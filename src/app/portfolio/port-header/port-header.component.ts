@@ -8,7 +8,7 @@ import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core
 })
 export class PortHeaderComponent implements OnInit {
 
-  @HostBinding('class') classes = 'port__header';
+  @HostBinding('attr.class') classes = 'port__header';
   
   constructor() { }
 

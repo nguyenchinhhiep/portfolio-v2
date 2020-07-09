@@ -1,0 +1,38 @@
+.port {
+
+  &__hero {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+
+    &-inner {
+      padding: 15rem 1.6rem;
+      flex-grow: 1;
+      width: 100%;
+      max-width: 124rem;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+
+      > h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      > h2 {
+        font-size: 6rem;
+        font-weight: bold;
+        margin-bottom: 2.5rem;
+      }
+
+      > h3 {
+        font-size: 4rem;
+        max-width: 70rem;
+        line-height: 1.3;
+      }
+      
+    }
+  }
+}

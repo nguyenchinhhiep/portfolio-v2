@@ -11,7 +11,7 @@
     
     .nav {
       flex-grow: 1;
-      max-width: 144rem;
+      max-width: 124rem;
       margin: 0 auto;
       padding: 0 1.6rem;
       display: flex;
@@ -28,9 +28,13 @@
       }
 
       &__item {
-        margin: 0 1.6rem; 
+        margin: 0 2rem; 
         padding: 1.2rem 1rem;
         cursor: pointer;
+
+        &:last-child {
+          margin-right: 0;
+        }
 
         &:hover > .nav__link::after {
           display: block;
@@ -51,7 +55,6 @@
           background: #000;
           display: none;
         }
-        
       }
     }
   }

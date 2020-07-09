@@ -7,7 +7,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
 
-  @HostBinding('class') classes = 'port';
+  @HostBinding('attr.class') classes = 'port';
 
   constructor() { }
 

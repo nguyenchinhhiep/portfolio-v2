@@ -7,7 +7,7 @@ import { Component, OnInit, HostBinding } from '@angular/core';
 })
 export class PortFooterComponent implements OnInit {
 
-  @HostBinding('class') classes = 'port-footer';
+  @HostBinding('attr.class') classes = 'port-footer';
 
   constructor() { }
 
