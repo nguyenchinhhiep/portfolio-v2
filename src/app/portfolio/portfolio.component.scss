@@ -1,35 +1,5 @@
 .port {
 
-   .contact-list {
-      position: fixed;
-      left: 4rem;
-      bottom: 0;
-      width: 4rem;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-
-      i {
-         font-size: 2rem;
-         width: 2rem;
-         height: 2rem;
-      }
-
-      &::after {
-         content: '';
-         margin-top: 2rem;
-         display: inline-block;
-         height: 11rem;
-         width: .1rem;
-         background: #000;
-      }
-
-      a {
-         display: block;
-         padding: 1.5rem 1rem;
-      }
-   }
 
    .email {
       position: fixed;
