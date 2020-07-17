@@ -3,6 +3,7 @@
   &__hero {
     display: flex;
     flex-direction: column;
+    position: relative;
     width: 100%;
     min-height: 100vh;
 
@@ -20,7 +21,7 @@
       text-align: center;
 
       > h1 {
-        font-size: 5rem;
+        font-size: 7rem;
         text-transform: uppercase;
         margin-bottom: 1rem;
         font-weight: 700;
@@ -28,7 +29,7 @@
       }
 
       > h2 {
-         font-size: 1.6rem;
+         font-size: 2.3rem;
          text-transform: uppercase;
          margin-bottom: 1rem;
          font-weight: 600;
@@ -39,7 +40,7 @@
       .hero-links {
          text-transform: uppercase;
          font-size: 1.3rem;
-         font-weight: 500;
+         font-weight: 600;
          margin-top: 15rem;
          letter-spacing: .6px;
          
@@ -56,34 +57,71 @@
             margin: 0 1.5rem;
          }
       }
+    }
 
-      .contact-list {
-         position: absolute;
-         right: 3rem;
-         top: 50%;
-         transform: translateY(-50%);
-         font-size: 1.8rem;
+    .contact-list {
+      position: absolute;
+      left: 3rem;
+      bottom: 2rem;
+      font-size: 1.8rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+   
+      >li {
+         position: relative;
+         margin: 0 1rem;
+         border: 1px solid;
+         width: 3rem;
+         height: 3rem;
+         border-radius: 50%;
          display: flex;
-         flex-direction: column;
-         justify-content: center;
-         align-items: center;
-
-         >li {
-            position: relative;
-            margin: 1.5rem 0;
-            border: 1px solid;
-            width: 3.8rem;
-            height: 3.8rem;
-            border-radius: 50%;
+         
+         a {
+            color: inherit;
+            flex-grow: 1;
             display: flex;
             justify-content: center;
             align-items: center;
-            
-            a {
-               color: inherit;
-            }
          }
       }
-    }
+   }
+
+   .scroll-mouse {
+      position: absolute;
+      bottom: 3rem;
+      left: 50%;
+      transform: translateX(-50%);
+
+      .mousey {
+         position: relative;
+         width: 2rem;
+         height: 3rem;
+         border: 2px solid;
+         border-radius: 25px;
+         opacity: 0.75;
+         cursor: pointer;
+
+         &::after{
+            content: '';
+            position: absolute;
+            left: .6rem;
+            top: .8rem;
+            width: .4rem;
+            height: .6rem;
+            border-radius: 40%;
+            background-color: #000;
+            animation-name: scroll;
+            animation-duration: 1.5s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+         }
+         
+       }
+       @keyframes scroll {
+         50% { transform: translateY(.5rem) }
+         100% { transform: translateY(0)}
+       }
+   }
   }
 }
