@@ -6,10 +6,11 @@ import { PortFooterComponent } from './port-footer/port-footer.component';
 
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 import { PortHeroComponent } from './port-hero/port-hero.component';
+import { PortAboutComponent } from './port-about/port-about.component';
 
 
 @NgModule({
-  declarations: [PortfolioComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent],
+  declarations: [PortfolioComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent, PortAboutComponent],
   imports: [
     CommonModule,
     PortfolioRoutingModule

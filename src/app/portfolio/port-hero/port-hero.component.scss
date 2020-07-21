@@ -9,7 +9,7 @@
 
     &-inner {
       position: relative;
-      padding: 15rem 3rem;
+      padding: 15rem 1.5rem;
       flex-grow: 1;
       width: 100%;
       max-width: 117rem;
@@ -21,11 +21,11 @@
       text-align: center;
 
       > h1 {
-        font-size: 7rem;
+        font-size: 6rem;
         text-transform: uppercase;
         margin-bottom: 1rem;
-        font-weight: 700;
-        letter-spacing: 6px;
+        font-weight: 800;
+        letter-spacing: 7px;
       }
 
       > h2 {
@@ -33,13 +33,13 @@
          text-transform: uppercase;
          margin-bottom: 1rem;
          font-weight: 600;
-         letter-spacing: 2px;
+         letter-spacing: 1px;
       }
 
 
       .hero-links {
          text-transform: uppercase;
-         font-size: 1.3rem;
+         font-size: 1.2rem;
          font-weight: 600;
          margin-top: 15rem;
          letter-spacing: .6px;
@@ -71,7 +71,7 @@
       >li {
          position: relative;
          margin: 0 1rem;
-         border: 1px solid;
+         // border: 1px solid;
          width: 3rem;
          height: 3rem;
          border-radius: 50%;
@@ -122,6 +122,42 @@
          50% { transform: translateY(.5rem) }
          100% { transform: translateY(0)}
        }
+   }
+
+   @media(max-width: 892px){
+      h1 {
+         font-size: 5rem;
+         letter-spacing: 5px;
+      }
+
+      h2 {
+         font-size: 1.6rem;
+      }
+
+      .hero-links {
+         font-size: 1.1rem;
+      }
+   }
+
+   @media(max-width: 692px){
+      h1 {
+         font-size: 4rem;
+      }
+
+      h2 {
+         font-size: 1.4rem;
+      }
+
+      .hero-links {
+         font-size: 1.1rem;
+      }
+   }
+
+   @media(max-width: 592px){
+      h1 {
+         font-size: 3.6rem;
+      }
+      
    }
   }
 }
