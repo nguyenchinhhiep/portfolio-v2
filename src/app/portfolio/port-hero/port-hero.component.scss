@@ -5,15 +5,13 @@
     flex-direction: column;
     position: relative;
     width: 100%;
+    padding: 150px 300px;
     min-height: 100vh;
 
     &-inner {
       position: relative;
-      padding: 15rem 1.5rem;
+      
       flex-grow: 1;
-      width: 100%;
-      max-width: 117rem;
-      margin: 0 auto;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -21,82 +19,29 @@
       text-align: center;
 
       > h1 {
-        font-size: 6rem;
-        text-transform: uppercase;
-        margin-bottom: 1rem;
-        font-weight: 800;
-        letter-spacing: 7px;
+        font-size: 70px;
+        font-weight: 600;
+        letter-spacing: 4px;
       }
 
       > h2 {
-         font-size: 2.3rem;
-         text-transform: uppercase;
-         margin-bottom: 1rem;
-         font-weight: 600;
-         letter-spacing: 1px;
-      }
-
-
-      .hero-links {
-         text-transform: uppercase;
-         font-size: 1.2rem;
-         font-weight: 600;
-         margin-top: 15rem;
-         letter-spacing: .6px;
-         
-         > a {
-            cursor: pointer;
-
-            &:hover {
-               text-decoration: underline;
-            }
-         }
-         
-
-         > span {
-            margin: 0 1.5rem;
-         }
+         font-size: 24px;
+         margin-bottom: 10px;
+         font-weight: 500;
+         letter-spacing: 2px;
       }
     }
 
-    .contact-list {
+    .scroll-mouse {
       position: absolute;
-      left: 3rem;
-      bottom: 2rem;
-      font-size: 1.8rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-   
-      >li {
-         position: relative;
-         margin: 0 1rem;
-         // border: 1px solid;
-         width: 3rem;
-         height: 3rem;
-         border-radius: 50%;
-         display: flex;
-         
-         a {
-            color: inherit;
-            flex-grow: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-         }
-      }
-   }
-
-   .scroll-mouse {
-      position: absolute;
-      bottom: 3rem;
+      bottom: 90px;
       left: 50%;
       transform: translateX(-50%);
 
       .mousey {
          position: relative;
-         width: 2rem;
-         height: 3rem;
+         width: 20px;
+         height: 30px;
          border: 2px solid;
          border-radius: 25px;
          opacity: 0.75;
@@ -105,10 +50,10 @@
          &::after{
             content: '';
             position: absolute;
-            left: .6rem;
-            top: .8rem;
-            width: .4rem;
-            height: .6rem;
+            left: 6px;
+            top: 8px;
+            width: 4px;
+            height: 6px;
             border-radius: 40%;
             background-color: #000;
             animation-name: scroll;
@@ -119,9 +64,21 @@
          
        }
        @keyframes scroll {
-         50% { transform: translateY(.5rem) }
+         50% { transform: translateY(5px) }
          100% { transform: translateY(0)}
        }
+      }
+
+   @media(max-width: 1000px){
+      h1 {
+         font-size: 6rem;
+         letter-spacing: 6px;
+      }
+
+      h2 {
+         font-size: 2rem;
+         letter-spacing: 1px;
+      }
    }
 
    @media(max-width: 892px){
@@ -131,31 +88,22 @@
       }
 
       h2 {
-         font-size: 1.6rem;
-      }
-
-      .hero-links {
-         font-size: 1.1rem;
+         font-size: 1.8rem;
       }
    }
 
-   @media(max-width: 692px){
+   @media(max-width: 700px){
       h1 {
-         font-size: 4rem;
+         font-size: 4.5rem;
+         letter-spacing: 3px;
       }
-
-      h2 {
-         font-size: 1.4rem;
-      }
-
-      .hero-links {
-         font-size: 1.1rem;
-      }
+      
    }
 
-   @media(max-width: 592px){
+   @media(max-width: 600px){
       h1 {
-         font-size: 3.6rem;
+         font-size: 3.7rem;
+         letter-spacing: 2px;
       }
       
    }

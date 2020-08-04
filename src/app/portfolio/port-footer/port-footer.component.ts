@@ -1,9 +1,10 @@
-import { Component, OnInit, HostBinding } from '@angular/core';
+import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core';
 
 @Component({
   selector: 'app-port-footer',
   templateUrl: './port-footer.component.html',
-  styleUrls: ['./port-footer.component.scss']
+  styleUrls: ['./port-footer.component.scss'],
+  encapsulation: ViewEncapsulation.None
 })
 export class PortFooterComponent implements OnInit {
 
