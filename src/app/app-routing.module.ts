@@ -3,24 +3,28 @@ import { Routes, RouterModule } from '@angular/router';
 
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/portfolio',
-    pathMatch: 'full'
-  },
-  {
-    path: 'portfolio',
-    loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
-  },
-  {
-    path: '**',
-    redirectTo: '/portfolio',
-    pathMatch: 'full' 
-  }
+   {
+      path: '',
+      redirectTo: '/chat-app',
+      pathMatch: 'full'
+   },
+   {
+      path: 'portfolio',
+      loadChildren: () => import('./portfolio/portfolio.module').then(m => m.PortfolioModule)
+   },
+   {
+      path: 'chat-app',
+      loadChildren: () => import('./chat-app/chat-app.module').then(m => m.ChatAppModule)
+   },
+   {
+      path: '**',
+      redirectTo: '/portfolio',
+      pathMatch: 'full'
+   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+   imports: [RouterModule.forRoot(routes)],
+   exports: [RouterModule]
 })
 export class AppRoutingModule { }
