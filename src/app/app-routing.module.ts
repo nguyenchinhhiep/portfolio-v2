@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
    {
       path: '',
-      redirectTo: '/chat-app',
+      redirectTo: '/portfolio',
       pathMatch: 'full'
    },
    {

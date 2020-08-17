@@ -2,12 +2,27 @@
    font-family: 'Calibre', sans-serif !important;
 
    &__heading {
-      font-size: 32px;
-      font-weight: 600;
+      font-size: 70px;
+      font-weight: 700;
       margin: 10px 0 40px;
    }
 
    main {
-      padding: 0 120px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 1440px;
+      padding: 0 15px;
+   }
+
+   @media (max-width: 992px){
+      main {
+         padding: 0 40px;
+      }
+   }
+
+   @media(max-width: 892px){
+      main {
+         padding: 0 20px;
+      }
    }
 }
