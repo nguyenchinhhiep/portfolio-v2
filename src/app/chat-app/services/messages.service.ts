@@ -3,18 +3,22 @@ import {Message} from "./../models/message.model";
 import { User } from "../models/user.model";
 import { Thread } from "../models/thread.model";
 import {filter, scan, publishReplay, refCount, map} from "rxjs/operators";
+import { Injectable } from "@angular/core";
 
+const initialMessages: Message[] = [];
 interface IMessagesOperation extends Function {
    (messages: Message[]): Message[];
 }
+
+@Injectable()
 export class MessagesService {
    private _newMessages: Subject<Message> = new Subject<Message>();
-   private _messages: Observable<Message[]>;
+   messages: Observable<Message[]>;
    newMessages$ = this._newMessages.asObservable();
    updates: Subject<any> = new Subject<any>();
    create: Subject<Message> = new Subject<Message>();
    constructor() {
-      this._messages = this.updates.pipe(
+      this.messages = this.updates.pipe(
          scan((messages: Message[], operation: IMessagesOperation) => {
             return operation(messages);
          }, initialMessages),
@@ -28,6 +32,8 @@ export class MessagesService {
             }
          })
       ).subscribe(this.updates);
+
+      this._newMessages.subscribe(this.create);
    }
    addMessage(newMessage: Message): void {
       this.updates.next((messages: Message[]): Message[] => {
