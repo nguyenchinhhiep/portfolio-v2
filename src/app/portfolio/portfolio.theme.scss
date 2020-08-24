@@ -1,0 +1,42 @@
+$theme-portfolio: (
+    light: (
+        text-primary: #111111,
+        text-secondary: #424242,
+        text-muted: #9A9A9A
+    ),
+    dark: (
+        text-primary: #ffffff,
+        text-secondary: #ffffffd6,
+        text-muted: #9A9A9A
+    )
+);
+
+@mixin port-theme($themes) {
+
+    @each $theme, $value in $themes {
+        $text-primary: map-get($value, text-primary );
+        $text-secondary: map-get($value, text-secondary);
+        $text-muted: map-get($value, text-muted);
+        
+  
+        .theme-port-#{$theme} {
+          
+
+            .text-primary {
+                color: $text-primary !important;
+            }
+
+            .text-secondary {
+                color: $text-secondary !important;
+            }
+
+            .text-muted {
+                color: $text-muted !important;
+            }
+        }
+         
+    }
+    
+  }
+
+  @include port-theme($theme-portfolio);

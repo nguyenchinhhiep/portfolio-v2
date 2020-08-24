@@ -1,28 +1,36 @@
 .port {
-   font-family: 'Calibre', sans-serif !important;
+  font-family: 'DM Sans', sans-serif !important;
 
-   &__heading {
-      font-size: 70px;
-      font-weight: 700;
-      margin: 10px 0 40px;
-   }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
 
-   main {
-      margin: 0 auto;
-      width: 100%;
-      max-width: 1440px;
-      padding: 0 15px;
-   }
+  .button {
+    font-size: 15px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    box-sizing: border-box;
+    border: 0;
+    padding: 12px 30px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
 
-   @media (max-width: 992px){
-      main {
-         padding: 0 40px;
-      }
-   }
+  .highlight-link {
+    transition: all .2s ease-in-out;
+    text-decoration: none;
+    display: inline-block;
+    padding: 2px 3px;
+    text-decoration: none;
+    font-size: 14px;
+    box-shadow: inset 0 -3px 0 #007bff;
+  }
 
-   @media(max-width: 892px){
-      main {
-         padding: 0 20px;
-      }
-   }
 }
