@@ -1,8 +1,8 @@
 .port {
-  font-family: 'DM Sans', sans-serif !important;
+  font-family: 'Poppins', sans-serif !important;
 
   .container {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     padding-left: 20px !important;
     padding-right: 20px !important;
@@ -24,13 +24,19 @@
   }
 
   .highlight-link {
+    cursor: pointer;
     transition: all .2s ease-in-out;
     text-decoration: none;
     display: inline-block;
-    padding: 2px 3px;
+    padding: 2px 5px;
     text-decoration: none;
     font-size: 14px;
     box-shadow: inset 0 -3px 0 #007bff;
+
+    &:hover {
+      box-shadow: inset 0 -33px 0 0 #007bff;
+      color: #fff;
+    }
   }
 
 }
