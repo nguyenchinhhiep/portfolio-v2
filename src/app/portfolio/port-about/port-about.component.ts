@@ -8,7 +8,7 @@ import { Component, OnInit, ViewEncapsulation, HostBinding } from '@angular/core
 })
 export class PortAboutComponent implements OnInit {
    
-   @HostBinding('attr.class') classes = 'port__about';
+   @HostBinding('attr.class') classes = 'port__about section container';
 
    constructor() { }
 
