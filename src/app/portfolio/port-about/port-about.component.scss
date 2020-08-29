@@ -2,8 +2,16 @@
 
 
    &__about {
-      margin-top: 100px;
       display: block;
+
+      p {
+         margin-bottom: 20px;
+         
+      }
+
+      a {
+         font-weight: 600;
+      }
    }
 
 }

@@ -1,0 +1,27 @@
+.port {
+
+  &__skills {
+    display: block;
+
+
+    .skills {
+      display: flex;
+      justify-content: space-between;
+
+
+      &__category {
+        font-size: 14px;
+
+        &-label {
+          font-weight: 600;;
+          font-size: 16px;
+          margin-bottom: 10px;
+        }
+
+        > ul > li {
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
