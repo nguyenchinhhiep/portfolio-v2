@@ -1,0 +1,29 @@
+.port {
+
+
+    &__contact {
+        display: block;
+        text-align: center;
+
+
+        > p {
+            font-size: 14px;
+            letter-spacing: .5px;
+            margin-bottom: 5px;
+        }
+
+        > h1 {
+            font-weight: 600;
+            font-size: 30px;
+            letter-spacing: .5px;
+
+            a {
+                text-decoration: none;
+            }
+
+             i {
+                font-size: 24px;
+            }
+        }
+    }
+}

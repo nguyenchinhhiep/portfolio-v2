@@ -10,10 +10,11 @@ import { PortAboutComponent } from './port-about/port-about.component';
 import { PortSkillsComponent } from './port-skills/port-skills.component';
 import { PortExperiencesComponent } from './port-experiences/port-experiences.component';
 import { PortProjectsComponent } from './port-projects/port-projects.component';
+import { PortContactComponent } from './port-contact/port-contact.component';
 
 
 @NgModule({
-  declarations: [PortfolioComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent, PortAboutComponent, PortSkillsComponent, PortExperiencesComponent, PortProjectsComponent],
+  declarations: [PortfolioComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent, PortAboutComponent, PortSkillsComponent, PortExperiencesComponent, PortProjectsComponent, PortContactComponent],
   imports: [
     CommonModule,
     PortfolioRoutingModule

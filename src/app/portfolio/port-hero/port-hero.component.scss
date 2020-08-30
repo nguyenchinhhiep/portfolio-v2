@@ -8,13 +8,14 @@
     padding: 120px 0;
 
 
-    > img {
+    >img {
       width: 100%;
       height: auto;
       position: absolute;
       left: 0;
       top: 20%;
     }
+
     &-inner {
       position: relative;
       flex-grow: 1;
@@ -23,6 +24,7 @@
       justify-content: center;
 
       h1 {
+        font-family: 'Poppins', 'Graphik', sans-serif;
         font-size: 50px;
         line-height: 1.5;
         font-weight: bold;
@@ -35,24 +37,17 @@
         line-height: 1.5;
       }
 
-      .line {
-        margin: 20px 0;
-        height: 3px;
-        width: 150px;
-      }
-
       .buttons {
         margin-top: 20px;
         font-size: 16px;
-        
+
 
         >span {
-          margin: 0 10px;
+          margin: 0 20px;
         }
 
         >a {
           font-size: 18px;
-          font-weight: 600;
         }
       }
     }

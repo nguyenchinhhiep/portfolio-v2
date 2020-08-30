@@ -2,30 +2,29 @@
 
    &-footer {
       width: 100%;
-      max-width: 1480px;
-      margin: 0 auto;
+      min-height: 70px;
+      padding: 15px 40px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 15px 140px;
-      background: #fff;
-      font-weight: 500;
-      height: 54px;
-      font-size: 16px;
+      font-size: 14px;
+      text-align: center;
 
-     
 
       &__contact {
          display: flex;
          align-items: center;
          justify-content: space-between;
+         font-size: 13px;
+         text-transform: uppercase;
+         letter-spacing: .5px;
          
 
          >li {
-            margin: 0 15px;
+            margin: 0 25px;
 
             > a {
-               color: inherit;
+               font-weight: 600;
             }
          
             &:first-child {
@@ -36,10 +35,6 @@
                margin-right: 0;
             }
          }
-      }
-
-      @media(max-width: 892px){
-         padding: 15px;
       }
    }
 }
