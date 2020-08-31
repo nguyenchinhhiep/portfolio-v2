@@ -2,16 +2,17 @@
 
    &-footer {
       width: 100%;
-      min-height: 70px;
       padding: 15px 40px;
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
       align-items: center;
       font-size: 14px;
       text-align: center;
 
 
       &__contact {
+         margin-top: 25px;
          display: flex;
          align-items: center;
          justify-content: space-between;

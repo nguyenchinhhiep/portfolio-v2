@@ -32,7 +32,7 @@
     }
   }
 
-  .button {
+  .btn {
     font-size: 15px;
     position: relative;
     z-index: 1;
@@ -46,6 +46,7 @@
     cursor: pointer;
     transition: all 0.3s ease;
   }
+
 
   .highlight-link {
     cursor: pointer;
@@ -62,6 +63,4 @@
       color: #fff !important;
     }
   }
-  
-
 }

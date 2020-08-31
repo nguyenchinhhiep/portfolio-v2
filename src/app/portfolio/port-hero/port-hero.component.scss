@@ -7,15 +7,6 @@
     min-height: 100vh;
     padding: 120px 0;
 
-
-    >img {
-      width: 100%;
-      height: auto;
-      position: absolute;
-      left: 0;
-      top: 20%;
-    }
-
     &-inner {
       position: relative;
       flex-grow: 1;
@@ -23,21 +14,15 @@
       flex-direction: column;
       justify-content: center;
 
-      h1 {
+      >h1 {
         font-family: 'Poppins', 'Graphik', sans-serif;
-        font-size: 50px;
-        line-height: 1.5;
+        font-size: 53px;
+        line-height: 1.4;
         font-weight: bold;
-        letter-spacing: 2px;
+        letter-spacing: 1px;
       }
 
-      p {
-        font-size: 20px;
-        color: #424242;
-        line-height: 1.5;
-      }
-
-      .buttons {
+      >.buttons {
         margin-top: 20px;
         font-size: 16px;
 
@@ -50,6 +35,68 @@
           font-size: 18px;
         }
       }
+    }
+
+    >.contact,
+    >.scroll-to-top {
+      cursor: pointer;
+      position: fixed;
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: #CED0D4;
+      border-radius: 20px;
+      bottom: 50px;
+      overflow: hidden;
+      text-decoration: none;
+      transition: all .2s cubic-bezier(.3, 0, .5, 1) .2s;
+      transform: translate3d(0, 0, 0);
+
+      >i {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 11px;
+        font-size: 18px;
+        color: #fff;
+      }
+
+      >span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 35px;
+        overflow: hidden;
+        display: block;
+        white-space: nowrap;
+        font-size: 13px;
+        line-height: 1.25rem;
+        font-weight: 600;
+        color: #fff;
+        opacity: 0;
+        transition: width 0s linear .2s, opacity .2s cubic-bezier(.3, 0, .5, 1);
+      }
+    }
+
+
+
+    >.contact {
+      left: 40px;
+
+      &:hover {
+        width: 120px;
+        transition: all .2s cubic-bezier(.3, 0, .5, 1);
+
+        >span {
+          width: auto;
+          opacity: 1;
+          transition: width 0s linear .2s, opacity .2s cubic-bezier(.3, 0, .5, 1) .2s;
+        }
+      }
+    }
+
+    >.scroll-to-top {
+      right: 40px;
     }
   }
 }
