@@ -10,16 +10,31 @@
 
 
       &__category {
-        font-size: 14px;
+        font-size: 15px;
 
         &-label {
-          font-weight: 600;;
+          font-weight: 600;
           font-size: 16px;
-          margin-bottom: 15px;
+          margin-bottom: 10px;
         }
 
-        > ul > li {
+
+        >ul>li {
           margin-bottom: 10px;
+
+          &::before {
+            content: "\2022";
+            /* Add content: \2022 is the CSS Code/unicode for a bullet */
+            color: #878A8F;
+            /* Change the color */
+            font-weight: bold;
+            /* If you want it to be bold */
+            display: inline-block;
+            /* Needed to add space between the bullet and the text */
+            width: 1em;
+            /* Also needed for space (tweak if needed) */
+            /* Also needed for space (tweak if needed) */
+          }
         }
       }
     }

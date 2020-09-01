@@ -6,6 +6,7 @@
     position: relative;
     min-height: 100vh;
     padding: 120px 0;
+    margin-bottom: 100px !important;
 
     &-inner {
       position: relative;
@@ -33,6 +34,7 @@
 
         >a {
           font-size: 18px;
+          font-weight: 600;
         }
       }
     }
@@ -97,6 +99,8 @@
 
     >.scroll-to-top {
       right: 40px;
+      opacity: 0;
+      visibility: hidden;
     }
   }
 }
