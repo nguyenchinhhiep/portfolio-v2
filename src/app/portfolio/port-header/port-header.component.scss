@@ -18,7 +18,7 @@
       justify-content: space-between;
       align-items: center;
 
-      .theme-switcher {
+      >.theme-switcher {
         margin-left: auto;
         display: flex;
         align-items: center;
@@ -77,7 +77,6 @@
 
           >input:checked+label {
             background: #4285f4;
-
           }
 
           >input:checked+label::before {

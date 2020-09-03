@@ -9,6 +9,7 @@ import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core
 export class PortHeaderComponent implements OnInit {
 
   @HostBinding('attr.class') classes = 'port__header';
+  isDarkMode: boolean = true;
   
   constructor() { }
 

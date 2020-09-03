@@ -1,15 +1,15 @@
 $theme-portfolio: (
     light: (
-        text-primary: #444452,
+        text-primary: #333333,
         text-secondary: #878A8F,
-        accent: #4285f4,
-        text-muted: #cccccc
+        accent: #4285F4,
+        background: #FFFFFF
     ),
     dark: (
-        text-primary: #ffffff,
-        text-secondary: #ffffffd6,
-        text-muted: #cccccc,
-        accent: #4285f4
+        text-primary: #FFFFFF,
+        text-secondary: #AAAAAA,
+        accent: #4285F4,
+        background: #171717
     )
 );
 
@@ -18,12 +18,12 @@ $theme-portfolio: (
     @each $theme, $value in $themes {
         $text-primary: map-get($value, text-primary );
         $text-secondary: map-get($value, text-secondary);
-        $text-muted: map-get($value, text-muted);
         $text-accent: map-get($value, accent);
+        $background: map-get($value, background );
         
   
         .theme-port-#{$theme} {
-          
+          background-color: $background !important;
 
             .text-primary {
                 color: $text-primary !important;
@@ -33,18 +33,12 @@ $theme-portfolio: (
                 color: $text-secondary !important;
             }
 
-            .text-muted {
-                color: $text-muted !important;
-            }
-
             .text-accent {
                 color: $text-accent !important;
             }
 
             .accent {
                 background: $text-accent !important;
-
-               
             }
         }
          
