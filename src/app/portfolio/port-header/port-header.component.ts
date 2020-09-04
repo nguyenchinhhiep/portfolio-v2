@@ -1,4 +1,6 @@
 import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core';
+import { PortfolioService } from '../portfolio.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-port-header',
@@ -9,11 +11,15 @@ import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core
 export class PortHeaderComponent implements OnInit {
 
   @HostBinding('attr.class') classes = 'port__header';
-  isDarkMode: boolean = true;
+  isDarkTheme: Observable<boolean>;
   
-  constructor() { }
+  constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
+  }
+
+  toggleDarkTheme(checked: boolean) {
+    this.portfolioService.setDarkTheme(checked);
   }
 
 }

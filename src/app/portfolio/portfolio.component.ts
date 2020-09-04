@@ -1,4 +1,6 @@
 import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core';
+import { PortfolioService } from './portfolio.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-portfolio',
@@ -9,10 +11,12 @@ import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core
 export class PortfolioComponent implements OnInit {
 
   @HostBinding('attr.class') classes = 'port';
+  isDarkTheme: Observable<boolean>;
 
-  constructor() { }
+  constructor(private portfolioService: PortfolioService) { }
 
   ngOnInit(): void {
+    this.isDarkTheme = this.portfolioService.isDarkTheme;
   }
 
 }
