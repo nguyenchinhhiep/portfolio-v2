@@ -1,4 +1,4 @@
-<div [ngClass]="{'theme-port-light': isDarkTheme | async}">
+<div [ngClass]="{'theme-port-light': (isDarkTheme | async) === false, 'theme-port-dark': (isDarkTheme | async) === true}">
     <app-port-header></app-port-header>
     <app-port-hero></app-port-hero>
     <app-port-about></app-port-about>

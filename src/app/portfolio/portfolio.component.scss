@@ -1,6 +1,20 @@
 .port {
+
+  &.transition {
+
+    .toggler > label::before {
+      transition: all ease .2s !important;
+    }
+    
+    &, *, *::before, *::after {
+
+      transition: all ease 0s !important;
+      transition-delay: 0s !important;
+      
+    }
+  }
+
   display: block;
-  background-color: #1c1e21;
   font-family: 'Graphik', sans-serif !important;
 
 
@@ -48,13 +62,12 @@
     padding: 12px 30px;
     text-align: center;
     cursor: pointer;
-    transition: all 0.3s ease;
   }
 
 
   .highlight-link {
+    transition: all ease .2s;
     cursor: pointer;
-    transition: all .2s ease-in-out;
     text-decoration: none;
     display: inline-block;
     padding: 3px;

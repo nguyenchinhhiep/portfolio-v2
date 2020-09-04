@@ -1,49 +1,64 @@
+@import './port-header/port-header.theme.scss';
+@import './port-hero/port-hero.theme.scss';
 $theme-portfolio: (
     light: (
         text-primary: #444452,
         text-secondary: #878A8F,
-        accent: #4285F4,
-        background: #FFFFFF
+        accent: #4285f4,
+        background: #FFFFFF,
+        background-secondary: #CED0D4
     ),
     dark: (
-        text-primary: #FFFFFF,
-        text-secondary: #AAAAAA,
-        accent: #4285F4,
-        background: #171717
+        text-primary: #EEEEEE,
+        text-secondary: #afafbf,
+        accent: #4285f4,
+        background: #171c28,
+        background-secondary: #393e46
     )
 );
 
-@mixin port-theme($themes) {
+@mixin portfolio-theme($themes) {
+    @include port-header-theme($themes);
+    @include port-hero-theme($themes);
 
     @each $theme, $value in $themes {
         $text-primary: map-get($value, text-primary );
         $text-secondary: map-get($value, text-secondary);
-        $text-accent: map-get($value, accent);
+        $accent: map-get($value, accent);
         $background: map-get($value, background );
+        $background-secondary: map-get($value, background-secondary);
         
-  
-        .theme-port-#{$theme} {
-          background-color: $background !important;
+        .port {
+            .theme-port-#{$theme} {
+                background-color: $background !important;
+                @if $theme == 'dark' {
+                    color: $text-secondary;
+                }
+      
+                .text-primary {
+                    color: $text-primary !important;
+                }
+    
+                .text-secondary {
+                    color: $text-secondary !important;
+                }
+    
+                .text-accent {
+                    color: $accent !important;
+                }
+    
+                .bg-accent {
+                    background: $accent !important;
+                }
 
-            .text-primary {
-                color: $text-primary !important;
-            }
-
-            .text-secondary {
-                color: $text-secondary !important;
-            }
-
-            .text-accent {
-                color: $text-accent !important;
-            }
-
-            .accent {
-                background: $text-accent !important;
-            }
-        }
-         
+                .bg-secondary {
+                    background: $background-secondary !important;
+                }
+              }
+       }
+      
     }
     
   }
 
-  @include port-theme($theme-portfolio);
+  @include portfolio-theme($theme-portfolio);

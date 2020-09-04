@@ -30,13 +30,6 @@
           background-size: 100%;
         }
 
-        >.light-icon {
-          background-image: url('/assets/images/theme-switcher/sun.svg');
-        }
-
-        >.dark-icon {
-          background-image: url('/assets/images/theme-switcher/moon.svg');
-        }
 
         >.toggler {
           margin: 10px;
@@ -75,9 +68,6 @@
             visibility: hidden;
           }
 
-          >input:checked+label {
-            background: #4285f4;
-          }
 
           >input:checked+label::before {
             left: 22px;

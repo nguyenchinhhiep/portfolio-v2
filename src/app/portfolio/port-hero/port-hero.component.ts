@@ -37,7 +37,7 @@ export class PortHeroComponent implements OnInit, AfterViewInit, OnDestroy {
 
     const scrollEvent$ = fromEvent(document, 'scroll')
       .pipe(
-        debounceTime(300),
+        debounceTime(100),
         takeUntil(this._unsubscribeAll),
       );
 

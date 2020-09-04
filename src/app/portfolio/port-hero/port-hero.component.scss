@@ -46,7 +46,6 @@
       display: block;
       width: 40px;
       height: 40px;
-      background: #CED0D4;
       border-radius: 20px;
       bottom: 40px;
       overflow: hidden;
@@ -60,7 +59,6 @@
         transform: translateY(-50%);
         left: 11px;
         font-size: 18px;
-        color: #fff;
       }
 
       >span {
@@ -73,7 +71,6 @@
         white-space: nowrap;
         font-size: 13px;
         font-weight: 600;
-        color: #fff;
         opacity: 0;
         transition: width 0s linear .2s, opacity .2s cubic-bezier(.3, 0, .5, 1);
       }
