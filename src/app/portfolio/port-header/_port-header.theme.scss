@@ -1,0 +1,58 @@
+@mixin port-header-theme($themes) {
+
+  @each $theme,
+  $value in $themes {
+
+    $accent: map-get($value, accent);
+
+
+    .theme-port-#{$theme} {
+
+      .port__header {
+
+        .light-icon {
+          @if $theme=='light' {
+            background-image: url('/assets/images/theme-switcher/sun.svg');
+          }
+
+          @else if $theme=='dark' {
+            background-image: url('/assets/images/theme-switcher/sun-white.svg');
+          }
+
+        }
+
+        .dark-icon {
+          @if $theme=='light' {
+            background-image: url('/assets/images/theme-switcher/moon.svg');
+          }
+
+          @else if $theme=='dark' {
+            background-image: url('/assets/images/theme-switcher/moon-white.svg');
+          }
+        }
+
+        .toggler {
+
+
+          >label {
+
+            background: #CED0D4;
+
+          }
+
+          >label::before {
+
+            background: #fff;
+
+          }
+
+          >input:checked+label {
+            background: $accent;
+          }
+
+        }
+      }
+    }
+  }
+
+}

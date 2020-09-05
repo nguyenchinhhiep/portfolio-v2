@@ -2,20 +2,25 @@
 
   &.transition {
 
-    .toggler > label::before {
+    .toggler>label,
+    .toggler>label::before {
       transition: all ease .2s !important;
     }
-    
-    &, *, *::before, *::after {
+
+    &,
+    *,
+    *::before,
+    *::after {
 
       transition: all ease 0s !important;
       transition-delay: 0s !important;
-      
+
     }
   }
 
   display: block;
-  font-family: 'Graphik', sans-serif !important;
+  font-family: 'Graphik',
+  sans-serif !important;
 
 
   .container {

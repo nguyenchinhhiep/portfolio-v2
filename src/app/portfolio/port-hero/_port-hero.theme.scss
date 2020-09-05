@@ -1,0 +1,29 @@
+@mixin port-hero-theme($themes) {
+
+  @each $theme,
+  $value in $themes {
+    $text-secondary: map-get($value, text-secondary);
+
+
+    .theme-port-#{$theme} {
+
+      .port__hero {
+
+        >.contact,
+        >.scroll-to-top {
+
+          >i,
+          >span {
+            @if $theme=='light' {
+              color: #FFFFFF;
+            }
+
+            @else if $theme=='dark' {
+              color: $text-secondary;
+            }
+          }
+        }
+      }
+    }
+  }
+}
