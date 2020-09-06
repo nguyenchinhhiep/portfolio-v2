@@ -11,15 +11,17 @@ import { Observable } from 'rxjs';
 export class PortHeaderComponent implements OnInit {
 
   @HostBinding('attr.class') classes = 'port__header';
-  isDarkTheme: Observable<boolean>;
+  currentTheme$: Observable<string>;
   
-  constructor(private portfolioService: PortfolioService) { }
+  constructor(private portfolioService: PortfolioService) { 
+    this.currentTheme$ = this.portfolioService.getCurrentTheme;
+  }
 
   ngOnInit(): void {
   }
 
   toggleDarkTheme(checked: boolean) {
-    this.portfolioService.setDarkTheme(checked);
+    this.portfolioService.setTheme(!!checked? 'dark': 'light');
   }
 
 }
