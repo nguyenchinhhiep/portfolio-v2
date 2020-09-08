@@ -1,4 +1,9 @@
 .port {
+  [data-scroll] {
+    visibility: hidden;
+    opacity: 0;
+    transform: translate3d(0, 20px,0);
+  }
 
   &.transition {
 
@@ -46,7 +51,7 @@
     }
 
     &__title {
-      font-size: 25px;
+      font-size: 32px;
       font-weight: 700;
       width: 100%;
       margin-bottom: 25px;

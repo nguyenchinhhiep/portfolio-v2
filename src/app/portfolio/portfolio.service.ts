@@ -11,7 +11,7 @@ export class PortfolioService {
         portEl.classList.add('transition');
         window.setTimeout(() => {
             portEl.classList.remove('transition');
-        }, 300)
+        }, 200)
         this._theme.next(theme);
         if (theme == 'dark') {
             localStorage.setItem('theme', 'dark');

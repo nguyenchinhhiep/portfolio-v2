@@ -52,4 +52,9 @@ export class PortHeroComponent implements OnInit, AfterViewInit, OnDestroy {
     })
   }
 
+  srollTo(el){
+    const element = document.querySelector('#'+el);
+    element.scrollIntoView({ behavior: 'smooth',block: 'center'  });
+  }
+
 }
