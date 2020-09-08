@@ -42,19 +42,25 @@ export class PortHeroComponent implements OnInit, AfterViewInit, OnDestroy {
       );
 
     scrollEvent$.subscribe(res => {
-      if(window.scrollY > 500){
-        this._renderer.setStyle(this.scrollToTop.nativeElement,'visibility','visible');
-        this._renderer.setStyle(this.scrollToTop.nativeElement,'opacity','1');
+      if (window.scrollY > 500) {
+        this._renderer.setStyle(this.scrollToTop.nativeElement, 'visibility', 'visible');
+        this._renderer.setStyle(this.scrollToTop.nativeElement, 'opacity', '1');
       } else {
-        this._renderer.removeStyle(this.scrollToTop.nativeElement,'visibility');
-        this._renderer.removeStyle(this.scrollToTop.nativeElement,'opacity');
+        this._renderer.removeStyle(this.scrollToTop.nativeElement, 'visibility');
+        this._renderer.removeStyle(this.scrollToTop.nativeElement, 'opacity');
       }
     })
   }
 
-  srollTo(el){
-    const element = document.querySelector('#'+el);
-    element.scrollIntoView({ behavior: 'smooth',block: 'center'  });
+  srollTo(el) {
+    const element = document.querySelector('#' + el);
+    const elementRect = element.getBoundingClientRect();
+    const absoluteElementTop = elementRect.top + window.pageYOffset;
+    const middle = absoluteElementTop - (window.innerHeight / 2);
+    window.scrollTo({
+      top: middle,
+      behavior: 'smooth'
+    });
   }
 
 }
