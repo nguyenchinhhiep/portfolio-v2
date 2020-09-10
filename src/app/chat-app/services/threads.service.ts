@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Observable, BehaviorSubject, Subject } from 'rxjs';
 import { Thread } from '../models/thread.model';
 import { MessagesService } from './messages.service';
 import { map } from 'rxjs/operators';
@@ -9,6 +9,7 @@ import { Message } from '../models/message.model';
 export class ThreadsService {
     threads: Observable<{[key:string]: Thread}>;
     orderedThreads: Observable<Thread[]>;
+    currentThread: Subject<Thread> = new BehaviorSubject(new Thread());
 
     constructor(private messagesService: MessagesService){
         this.threads = this.messagesService.messages.pipe(
@@ -34,6 +35,10 @@ export class ThreadsService {
                 return resultThreads;
             })
         )
+    }
+
+    setCurrentThread(newThread: Thread): void {
+        this.currentThread.next(newThread);
     }
 
 }

@@ -28,7 +28,7 @@ export class MessagesService {
       this.create.pipe(
          map(function(message: Message): IMessagesOperation{
             return (messages: Message[]) => {
-               return messages.concat(message);
+               return messages.concat(message);    
             }
          })
       ).subscribe(this.updates);
