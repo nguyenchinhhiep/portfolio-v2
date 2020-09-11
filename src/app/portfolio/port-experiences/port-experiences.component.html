@@ -1,21 +1,15 @@
 <div class="section__inner" data-scroll>
     <h2 class="section__title text-primary">Experiences</h2>
     <div class="section__content">
-        <div class="job__item">
+        <div class="job__item" *ngFor="let job of jobsList; let i = index">
             <div class="job__title">
-                <p class="job__position text-primary">Front-end Developer <a class="job__place text-accent" href="https://hocvoichuyengia.com/">@ HVCG Software</a></p>
-                
-                <span class="job__time text-secondary">June 2019 - Present</span>
+                <p class="job__position text-primary">{{job.position}} <a class="job__place text-accent"
+                        href="https://hocvoichuyengia.com/">@ {{job.place}}</a></p>
+                <span class="job__time text-secondary">{{job.time}}</span>
             </div>
             <ul class="job__detail">
-                <li>
-                    Take website design files from designers and convert them into HTML, JavaScript and CSS code.
-                </li>
-                <li>
-                    Collaborate with back-end developers and communicate with the API using standard methods and communicate with external web services.
-                </li>
-                <li>
-                    Interfaced with user experience designers and other developers to ensure thoughtful and coherent user experiences across Starry’s iOS and Android mobile apps
+                <li *ngFor="let res of job.responsibilities">
+                    {{res}}
                 </li>
             </ul>
         </div>

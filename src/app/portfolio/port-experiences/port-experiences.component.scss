@@ -6,6 +6,18 @@
     .job {
 
       &__item {
+        position: relative;
+        padding-left: 20px;
+
+        &::before {
+          font-family: "Font Awesome 5 Free";
+          font-weight: 900;
+          color: #878A8F;
+          content: '\f0da';
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
       }
 
       &__title {
@@ -15,20 +27,23 @@
       }
 
       &__detail {
-        font-size: 16px;
-        margin-left: 10px;
+
         > li {
           margin-bottom: 10px;
+          padding-left: 30px;
+          position: relative;
           &::before {
             content: "\2022";
             /* Add content: \2022 is the CSS Code/unicode for a bullet */
             color: #878A8F;
             /* Change the color */
             font-weight: bold;
+            position: absolute;
+            left: 0;
             /* If you want it to be bold */
             display: inline-block;
             /* Needed to add space between the bullet and the text */
-            width: 1em;
+            // width: 1em;
             /* Also needed for space (tweak if needed) */
             /* Also needed for space (tweak if needed) */
           }
@@ -36,13 +51,14 @@
       }
       
 
-      &__place {
-       
-      }
 
       &__position {
         font-weight: 600;
         margin-bottom: 0;
+
+        > a {
+          text-decoration: none;
+        }
       }
 
       &__time {
