@@ -1,5 +1,24 @@
 <div class="section__inner" data-scroll id="projects">
     <h2 class="section__title text-primary">Projects</h2>
-    <div class="section__content text-primary">
+    <div class="section__content">
+        <div class="project" *ngFor="let project of projectsList">
+            <h3 class="project__name text-primary">
+                <span>{{project.name}}</span>
+                <div class="project__navigate">
+                    <a href="{{project.externalLink}}" class="text-secondary" title="View Project" target="_blank">
+                        <i class="fas fa-external-link-alt"></i>
+                    </a>
+                    <a href="{{project.githubLink}}" class="text-secondary" title="Github" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </h3>
+            <p class="project__description">
+                {{project.description}}
+            </p>
+            <ul class="project__tech text-secondary">
+                <li *ngFor="let tech of project.techList">{{tech}}</li>
+            </ul>
+        </div>
     </div>
 </div>

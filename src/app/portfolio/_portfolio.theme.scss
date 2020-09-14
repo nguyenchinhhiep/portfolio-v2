@@ -32,7 +32,9 @@ $theme-portfolio: (
             .theme-port-#{$theme} {
                 background-color: $background !important;
                 @if $theme == 'dark' {
-                    color: $text-secondary;
+                    color: $text-secondary !important;
+                } @else if $theme == 'light' {
+                    color: $text-primary !important;
                 }
       
                 .text-primary {

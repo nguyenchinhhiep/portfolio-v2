@@ -14,7 +14,7 @@ export class PortExperiencesComponent implements OnInit {
     this.jobsList = [
       {
         place: 'HVCG Software',
-        position: 'Front-end Developer',
+        position: 'Front-end Web Developer',
         time: 'June 2019 - Present',
         responsibilities: [
           'Take website design files from designers and convert them into HTML, JavaScript and CSS code.',
