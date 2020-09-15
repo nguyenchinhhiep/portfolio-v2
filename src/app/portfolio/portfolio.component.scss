@@ -1,4 +1,6 @@
 .port {
+  position: relative;
+
   [data-scroll] {
     visibility: hidden;
     opacity: 0;

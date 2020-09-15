@@ -7,6 +7,7 @@ import smoothscroll from 'smoothscroll-polyfill';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
+  constructor(){}
   
   ngOnInit(){
     smoothscroll.polyfill();

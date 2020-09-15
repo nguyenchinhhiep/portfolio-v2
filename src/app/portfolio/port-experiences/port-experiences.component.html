@@ -1,7 +1,7 @@
-<div class="section__inner" data-scroll>
-    <h2 class="section__title text-primary">Experiences</h2>
+<div class="section__inner">
+    <h2 class="section__title text-primary" data-scroll>Experiences</h2>
     <div class="section__content">
-        <div class="job__item" *ngFor="let job of jobsList; let i = index">
+        <div class="job__item" *ngFor="let job of jobsList; let i = index" data-scroll>
             <div class="job__title">
                 <p class="job__position text-primary">{{job.position}} <a class="job__place text-accent"
                         href="https://hocvoichuyengia.com/">@ {{job.place}}</a></p>

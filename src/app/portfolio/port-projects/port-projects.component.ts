@@ -14,8 +14,8 @@ export class PortProjectsComponent implements OnInit {
     this.projectsList = [
       {
         name: 'Landing Page Template',
-        description: ' A fully responsive website template with a one-page structure using only pure HTML and CSS without any framework.',
-        techList: ['HTML','CSS', 'Javascript','Jquery'],
+        description: ' A fully responsive website template with a one-page structure built only with pure HTML and CSS without any frameworks.',
+        techList: ['HTML','CSS', 'JavaScript','jQuery'],
         externalLink:'https://nguyenchinhhiep.github.io/landing-page/dist/html/index.html',
         githubLink: 'https://github.com/nguyenchinhhiep/landing-page'
       }
