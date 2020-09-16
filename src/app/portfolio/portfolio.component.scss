@@ -4,7 +4,7 @@
   [data-scroll] {
     visibility: hidden;
     opacity: 0;
-    transform: translate3d(0, 30px,0);
+    transform: translate3d(0, 30px, 0);
   }
 
   &.transition {
@@ -91,5 +91,246 @@
       box-shadow: inset 0 -33px 0 0 #4285f4;
       color: #fff !important;
     }
+  }
+
+  @media(max-width: 920px) {
+
+    .container {
+      max-width: 720px;
+    }
+
+    .section {
+
+      &__title {
+        font-size: 24px;
+      }
+    }
+
+    &__hero {
+      h1 {
+        font-size: 43px !important;
+        letter-spacing: 0 !important;
+      }
+
+      .buttons {
+        font-size: 14px !important;
+
+        >a {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 940px) {
+
+    .scroll-to-top, .contact {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  }
+
+
+  @media(max-width: 735px) {
+    .container {
+      max-width: 650px;
+    }
+
+    &__header {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 38.8px !important;
+      }
+    }
+
+
+  }
+
+  @media(max-width: 665px) {
+    .container {
+      max-width: 570px;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 33.7px !important;
+      }
+
+      .buttons {
+        font-size: 13px !important;
+
+        >a {
+          font-size: 14px !important;
+        }
+      }
+    }
+
+    .section {
+
+      &__title {
+        font-size: 22px;
+      }
+
+
+      &__content {
+        font-size: 15px;
+
+        .project__name {
+          font-size: 15px;
+        }
+
+        .skills__category li,
+        .project__description,
+        .job__time,
+        .job__detail>li {
+          font-size: 14px;
+        }
+      }
+    }
+
+
+  }
+
+
+  @media(max-width: 585px) {
+
+    .container {
+      max-width: 540px;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 31.8px !important;
+      }
+    }
+
+
+  }
+
+  @media(max-width: 555px) {
+
+    .container {
+      max-width: 491px;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 28.8px !important;
+      }
+
+
+    }
+
+    .section {
+
+      &__content {
+        font-size: 14px;
+
+        .project__name {
+          font-size: 14px;
+        }
+
+        .skills__category li,
+        .project__description,
+        .job__time,
+        .job__detail>li {
+          font-size: 14px;
+        }
+      }
+    }
+
+  }
+
+  @media(max-width: 505px) {
+
+    .container {
+      max-width: 446px;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 25.7px !important;
+      }
+    }
+
+  }
+
+  @media(max-width: 456px) {
+
+    .container {
+      max-width: 410px;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 23.5px !important;
+      }
+    }
+
+    .section {
+
+      &__title {
+        font-size: 20px;
+      }
+
+      &__content {
+        font-size: 13px;
+
+        .project__name {
+          font-size: 13px;
+        }
+
+        .skills__category li,
+        .project__description,
+        .job__time,
+        .job__detail>li {
+          font-size: 13px;
+        }
+      }
+    }
+
+    &__footer {
+      font-size: 13px !important;
+
+      ul {
+        font-size: 11px !important;
+
+        li {
+          margin: 0 10px !important;
+        }
+      }
+    }
+
+  }
+
+  @media(max-width: 420px) {
+
+    .container {
+      max-width: 360px;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 20px !important;
+      }
+
+      .buttons {
+        >a {
+          font-size: 13px !important;
+        }
+      }
+    }
+
+    .section {
+
+      &__title {
+        font-size: 18px;
+      }
+    }
+
   }
 }

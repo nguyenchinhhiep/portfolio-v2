@@ -1,6 +1,6 @@
 .port {
 
-   &-footer {
+   &__footer {
       width: 100%;
       padding: 40px 0;
       display: flex;
@@ -11,9 +11,11 @@
       text-align: center;
 
 
-      &__contact {
+      &-contact {
+         width: 100%;
          margin-top: 25px;
          display: flex;
+         flex-wrap: wrap;
          align-items: center;
          justify-content: space-between;
          font-size: 13px;
@@ -22,7 +24,7 @@
          
 
          >li {
-            margin: 0 25px;
+            margin: 0 25px 10px 25px;
 
             > a {
                font-weight: 600;
