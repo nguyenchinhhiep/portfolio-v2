@@ -93,6 +93,16 @@
     }
   }
 
+  @media(max-width: 940px) {
+
+    .scroll-to-top,
+    .contact {
+      opacity: 0 !important;
+      visibility: hidden !important;
+    }
+  }
+
+
   @media(max-width: 920px) {
 
     .container {
@@ -107,6 +117,7 @@
     }
 
     &__hero {
+
       h1 {
         font-size: 43px !important;
         letter-spacing: 0 !important;
@@ -122,18 +133,12 @@
     }
   }
 
-  @media(max-width: 940px) {
-
-    .scroll-to-top, .contact {
-      opacity: 0 !important;
-      visibility: hidden !important;
-    }
-  }
+ 
 
 
-  @media(max-width: 735px) {
+  @media(max-width: 740px) {
     .container {
-      max-width: 650px;
+      max-width: 640px;
     }
 
     &__header {
@@ -143,30 +148,16 @@
 
     &__hero {
       h1 {
-        font-size: 38.8px !important;
+        font-size: 38px !important;
       }
     }
 
 
   }
 
-  @media(max-width: 665px) {
+  @media(max-width: 660px) {
     .container {
-      max-width: 570px;
-    }
-
-    &__hero {
-      h1 {
-        font-size: 33.7px !important;
-      }
-
-      .buttons {
-        font-size: 13px !important;
-
-        >a {
-          font-size: 14px !important;
-        }
-      }
+      max-width: 560px;
     }
 
     .section {
@@ -192,40 +183,37 @@
       }
     }
 
+    &__hero {
+      h1 {
+        font-size: 33px !important;
+      }
+
+      .buttons {
+        font-size: 13px !important;
+
+        >a {
+          font-size: 14px !important;
+        }
+      }
+    }
+
+    
+
 
   }
 
 
-  @media(max-width: 585px) {
+  @media(max-width: 580px) {
 
     .container {
-      max-width: 540px;
-    }
-
-    &__hero {
-      h1 {
-        font-size: 31.8px !important;
-      }
-    }
-
-
-  }
-
-  @media(max-width: 555px) {
-
-    .container {
-      max-width: 491px;
-    }
-
-    &__hero {
-      h1 {
-        font-size: 28.8px !important;
-      }
-
-
+      max-width: 480px;
     }
 
     .section {
+
+      // &__title {
+      //   font-size: 20px !important;
+      // }
 
       &__content {
         font-size: 14px;
@@ -243,38 +231,27 @@
       }
     }
 
-  }
-
-  @media(max-width: 505px) {
-
-    .container {
-      max-width: 446px;
-    }
-
     &__hero {
       h1 {
-        font-size: 25.7px !important;
+        font-size: 28px !important;
       }
     }
 
+
   }
 
-  @media(max-width: 456px) {
+
+
+  @media(max-width: 490px) {
 
     .container {
-      max-width: 410px;
-    }
-
-    &__hero {
-      h1 {
-        font-size: 23.5px !important;
-      }
+      max-width: 390px;
     }
 
     .section {
 
       &__title {
-        font-size: 20px;
+        font-size: 18px;
       }
 
       &__content {
@@ -293,44 +270,70 @@
       }
     }
 
-    &__footer {
-      font-size: 13px !important;
-
-      ul {
-        font-size: 11px !important;
-
-        li {
-          margin: 0 10px !important;
-        }
-      }
-    }
-
-  }
-
-  @media(max-width: 420px) {
-
-    .container {
-      max-width: 360px;
-    }
-
     &__hero {
       h1 {
-        font-size: 20px !important;
+        font-size: 22px !important;
+        line-height: 1.7 !important;
       }
 
       .buttons {
+        font-size: 12px !important;
+
         >a {
           font-size: 13px !important;
         }
       }
     }
 
-    .section {
+    &__footer {
 
-      &__title {
-        font-size: 18px;
+      font-size: 12px !important;
+
+      &-contact {
+
+        > li {
+          font-size: 11px !important;
+          margin: 0 15px 10px 15px !important;
+        }
+      }
+    }
+  }
+
+  @media(max-width: 395px){
+
+    .container {
+      max-width: 350px;
+    }
+
+    &__hero {
+      h1 {
+        font-size: 19px !important;
+      }
+
+      .buttons {
+        font-size: 11px !important;
+
+        >a {
+          font-size: 12px !important;
+        }
       }
     }
 
+    &__skills {
+      
+      .skills__category {
+
+        &:nth-child(2) {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+        }
+
+        &:last-child {
+          flex-grow: 1 !important;
+          margin: 0 auto !important;
+        }
+      }
+    }
   }
+
 }
