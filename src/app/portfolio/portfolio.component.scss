@@ -211,9 +211,9 @@
 
     .section {
 
-      // &__title {
-      //   font-size: 20px !important;
-      // }
+      &__title {
+        margin-bottom: 30px !important;
+      }
 
       &__content {
         font-size: 14px;
@@ -273,17 +273,20 @@
     &__hero {
       h1 {
         font-size: 22px !important;
-        line-height: 1.7 !important;
+        line-height: 2 !important;
       }
 
       .buttons {
-        font-size: 12px !important;
+        > span {
+          margin: 0 10px !important;
+        }
 
         >a {
           font-size: 13px !important;
         }
       }
     }
+
 
     &__footer {
 
@@ -307,7 +310,7 @@
 
     &__hero {
       h1 {
-        font-size: 19px !important;
+        font-size: 19.8px !important;
       }
 
       .buttons {
