@@ -15,7 +15,7 @@ export class PortProjectsComponent implements OnInit {
       {
         name: 'Landing Page Template',
         description: ' A fully responsive website template with a one-page structure built only with pure HTML and CSS without any frameworks.',
-        techList: ['HTML','CSS', 'JavaScript','jQuery'],
+        techList: ['HTML','CSS', 'JavaScript','jQuery','Gulp'],
         externalLink:'https://nguyenchinhhiep.github.io/landing-page/dist/html/index.html',
         githubLink: 'https://github.com/nguyenchinhhiep/landing-page'
       }
