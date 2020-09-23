@@ -21,14 +21,14 @@ export class PortProjectsComponent implements OnInit {
         githubLink: 'https://github.com/nguyenchinhhiep/landing-page'
       },
       {
-        name: 'Wow City Template',
+        name: 'WowCity Template',
         description: 'My first experience of converting a PSD design file to HTML and CSS code.',
         techList: ['HTML','CSS', 'Javascript'],
         externalLink:'https://nguyenchinhhiep.github.io/wowcity/index.html',
         githubLink: 'https://github.com/nguyenchinhhiep/wowcity'
       },
       {
-        name: 'Personal Website V1',
+        name: 'Personal Website v1',
         description: 'This is my first portfolio website I built in March 2019 after learning quite a bit about HTML, CSS, Javascript and jQuery. Since then, I think my front-end skills have improved a lot.',
         techList: ['HTML','CSS', 'Javascript', 'jQuery'],
         externalLink:'https://nguyenchinhhiep.github.io/portfolio-v1/home.html',
