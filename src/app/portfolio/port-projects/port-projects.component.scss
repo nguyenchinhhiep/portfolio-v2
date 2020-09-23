@@ -28,7 +28,7 @@
       }
 
       &__description {
-        font-size: 16px;
+        font-size: 15px;
         margin-bottom: 20px;
       }
 
@@ -43,8 +43,9 @@
           display: inline-block;
           margin: 0 10px 10px 0; 
           font-size: 12px;
-          padding: 2px 8px;
+          padding: 3px 7px 1px;
           border-radius: 4px;
+          letter-spacing: .3px;
           color: #4285f4;
           border: 1px solid #4285f4;
         }
