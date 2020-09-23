@@ -86,9 +86,11 @@
 
   @media(max-width: 576px){
     &__text {
-      
+      >h3{
+        font-size: 12px !important;
+      }
       > h1 {
-        font-size: 30px;
+        font-size: 35px;
       }
     }
   }
