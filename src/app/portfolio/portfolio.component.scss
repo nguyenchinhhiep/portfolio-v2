@@ -26,7 +26,7 @@
   }
 
   display: block;
-  font-family: 'Source Serif Pro',
+  font-family: 'Apercu',
   sans-serif !important;
 
 
@@ -53,6 +53,7 @@
     }
 
     &__title {
+      font-family: 'Poppins', sans-serif;
       font-size: 32px;
       font-weight: 700;
       width: 100%;
@@ -111,29 +112,29 @@
     .section {
 
       &__title {
-        font-size: 24px;
+        font-size: 24px !important;
       }
     }
 
     &__hero {
 
       h1 {
-        font-size: 43px !important;
-        letter-spacing: 0 !important;
+        font-size: 41px !important;
+        line-height: 1.7 !important;
       }
 
       .buttons {
         font-size: 14px !important;
 
         >a {
-          font-size: 16px !important;
+          font-size: 17px !important;
         }
       }
     }
 
     &__footer {
       .copyright {
-        font-size: 13px !important;
+        font-size: 14px !important;
      }
     }
   }
@@ -153,7 +154,7 @@
 
     &__hero {
       h1 {
-        font-size: 38px !important;
+        font-size: 36px !important;
       }
     }
 
@@ -168,36 +169,36 @@
     .section {
 
       &__title {
-        font-size: 22px;
+        font-size: 22px !important;
       }
 
 
       &__content {
-        font-size: 15px;
+        font-size: 16px !important;
 
         .project__name {
-          font-size: 15px;
+          font-size: 15px !important;
         }
 
         .skills__category li,
         .project__description,
         .job__time,
         .job__detail>li {
-          font-size: 14px;
+          font-size: 15px !important;
         }
       }
     }
 
     &__hero {
       h1 {
-        font-size: 33px !important;
+        font-size: 31px !important;
       }
 
       .buttons {
-        font-size: 13px !important;
+        font-size: 14px !important;
 
         >a {
-          font-size: 14px !important;
+          font-size: 16px !important;
         }
       }
     }
@@ -221,21 +222,20 @@
       }
 
       &__content {
-        font-size: 14px;
-
+        font-size: 15px !important;
 
         .skills__category li,
         .project__description,
         .job__time,
         .job__detail>li {
-          font-size: 14px;
+          font-size: 14px !important;
         }
       }
     }
 
     &__hero {
       h1 {
-        font-size: 28px !important;
+        font-size: 26px !important;
       }
     }
 
@@ -253,38 +253,43 @@
     .section {
 
       &__title {
-        font-size: 18px;
+        font-size: 18px !important;
       }
 
       &__content {
-        font-size: 13px;
+        font-size: 14px !important;
 
         .project__name {
-          font-size: 14px;
+          font-size: 14px !important;
         }
 
         .skills__category li,
         .project__description,
         .job__time,
         .job__detail>li {
-          font-size: 13px;
+          font-size: 14px !important;
+        }
+        .job__detail > li {
+          padding-left: 15px !important;
         }
       }
     }
 
     &__hero {
       h1 {
-        font-size: 22px !important;
+        font-size: 20.5px !important;
         line-height: 2 !important;
       }
 
       .buttons {
-        > span {
+
+        >span {
           margin: 0 10px !important;
         }
-
         >a {
-          font-size: 13px !important;
+          font-size: 14px !important;
+          padding-left: 0 !important;
+          padding-right: 0 !important;
         }
       }
     }
@@ -292,13 +297,23 @@
 
     &__footer {
 
-      font-size: 12px !important;
+      .copyright {
+        font-size: 13px !important;
+        letter-spacing: 0 !important;
+      }
 
       &-contact {
-
+        justify-content: space-between !important;
         > li {
           font-size: 11px !important;
-          margin: 0 15px 10px 15px !important;
+          margin: 0 5px !important;
+          &:first-child {
+            margin-left: 0 !important;
+          }
+
+          &:last-child{
+            margin-right: 0 !important;
+          }
         }
       }
     }
@@ -312,15 +327,7 @@
 
     &__hero {
       h1 {
-        font-size: 19.8px !important;
-      }
-
-      .buttons {
-        font-size: 11px !important;
-
-        >a {
-          font-size: 12px !important;
-        }
+        font-size: 18px !important;
       }
     }
 

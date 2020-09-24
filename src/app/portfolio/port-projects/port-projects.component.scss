@@ -8,7 +8,7 @@
       margin-bottom: 40px;
       
       &__name {
-        font-weight: 600;
+        font-weight: bold;
         font-size: 17px;
         margin-bottom: 15px;
         display: flex;
@@ -43,10 +43,11 @@
           display: inline-block;
           margin: 0 10px 10px 0; 
           font-size: 12px;
-          padding: 3px 7px 1px;
+          padding: 3px 7px;
           border-radius: 4px;
           letter-spacing: .3px;
           color: #4285f4;
+          font-weight: 500;
           border: 1px solid #4285f4;
         }
       }
@@ -54,8 +55,6 @@
 
     .see-more {
       > button {
-        padding-left: 0;
-        padding-right: 0;
         background: transparent;
       }
     }
