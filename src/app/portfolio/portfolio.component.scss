@@ -43,7 +43,7 @@
     &__inner {
       display: flex;
       flex-direction: column;
-      max-width: 700px;
+      max-width: 680px;
       margin: 0 auto;
       width: 100%;
     }
@@ -135,11 +135,11 @@
     &__footer {
       .copyright {
         font-size: 14px !important;
-     }
+      }
     }
   }
 
- 
+
 
 
   @media(max-width: 740px) {
@@ -176,14 +176,10 @@
       &__content {
         font-size: 16px !important;
 
-        .project__name {
-          font-size: 15px !important;
-        }
-
-        .skills__category li,
+        .skills,
         .project__description,
         .job__time,
-        .job__detail>li {
+        .job__detail {
           font-size: 15px !important;
         }
       }
@@ -195,17 +191,13 @@
       }
 
       .buttons {
-        font-size: 14px !important;
+        font-size: 14.5px !important;
 
         >a {
           font-size: 16px !important;
         }
       }
     }
-
-    
-
-
   }
 
 
@@ -224,11 +216,11 @@
       &__content {
         font-size: 15px !important;
 
-        .skills__category li,
+        .skills,
         .project__description,
         .job__time,
-        .job__detail>li {
-          font-size: 14px !important;
+        .job__detail {
+          font-size: 14.5px !important;
         }
       }
     }
@@ -257,19 +249,20 @@
       }
 
       &__content {
-        font-size: 14px !important;
+        font-size: 14.5px !important;
 
         .project__name {
-          font-size: 14px !important;
+          font-size: 14.5px !important;
         }
 
-        .skills__category li,
+        .skills,
         .project__description,
         .job__time,
-        .job__detail>li {
-          font-size: 14px !important;
+        .job__detail {
+          font-size: 14.5px !important;
         }
-        .job__detail > li {
+
+        .job__detail>li {
           padding-left: 15px !important;
         }
       }
@@ -286,6 +279,7 @@
         >span {
           margin: 0 10px !important;
         }
+
         >a {
           font-size: 14px !important;
           padding-left: 0 !important;
@@ -299,19 +293,20 @@
 
       .copyright {
         font-size: 13px !important;
-        letter-spacing: 0 !important;
       }
 
       &-contact {
         justify-content: space-between !important;
-        > li {
+
+        >li {
           font-size: 11px !important;
           margin: 0 5px !important;
+
           &:first-child {
             margin-left: 0 !important;
           }
 
-          &:last-child{
+          &:last-child {
             margin-right: 0 !important;
           }
         }
@@ -319,7 +314,7 @@
     }
   }
 
-  @media(max-width: 395px){
+  @media(max-width: 395px) {
 
     .container {
       max-width: 350px;
@@ -332,7 +327,7 @@
     }
 
     &__skills {
-      
+
       .skills__category {
 
         &:nth-child(2) {

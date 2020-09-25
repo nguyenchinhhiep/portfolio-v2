@@ -9,7 +9,6 @@
       
       &__name {
         font-weight: bold;
-        font-size: 17px;
         margin-bottom: 15px;
         display: flex;
         justify-content: space-between;
@@ -56,6 +55,7 @@
     .see-more {
       > button {
         background: transparent;
+        font-weight: 500;
       }
     }
 

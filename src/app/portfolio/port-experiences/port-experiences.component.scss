@@ -16,6 +16,10 @@
         margin-bottom: 15px;
       }
 
+      &__time {
+        font-size: 16px;
+      }
+
       &__detail {
         font-size: 16px;
         >li {
@@ -44,9 +48,7 @@
         }
       }
 
-      &__time {
-        font-size: 15px;
-      }
+     
     }
 
   }

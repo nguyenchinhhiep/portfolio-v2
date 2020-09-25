@@ -2,7 +2,7 @@
     <h2 class="section__title text-primary" data-scroll>Projects</h2>
     <div class="section__content">
         <div class="project" *ngFor="let project of projectsList" data-scroll>
-            <h3 class="project__name text-primary">
+            <div class="project__name text-primary">
                 <span>{{project.name}}</span>
                 <div class="project__navigate">
                     <a href="{{project.externalLink}}" class="text-secondary" title="View Project" target="_blank">
@@ -12,7 +12,7 @@
                         <i class="fab fa-github"></i>
                     </a>
                 </div>
-            </h3>
+            </div>
             <p class="project__description">
                 {{project.description}}
             </p>
@@ -20,7 +20,7 @@
                 <li *ngFor="let tech of project.techList">{{tech}}</li>
             </ul>
         </div>
-        <div class="see-more">
+        <div class="see-more" data-scroll>
             <button class="text-primary">See More...</button>
         </div>
     </div>
