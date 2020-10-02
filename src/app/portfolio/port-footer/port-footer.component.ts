@@ -9,10 +9,29 @@ import { Component, OnInit, HostBinding, ViewEncapsulation } from '@angular/core
 export class PortFooterComponent implements OnInit {
 
   @HostBinding('attr.class') classes = 'port__footer container';
+  contactList: any;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.contactList = [
+      {
+        name: 'Email',
+        link: 'mailto:nguyenchinhhiep95@gmail.com'
+      },
+      {
+        name: 'Facebook',
+        link: 'https://www.facebook.com/hiepnguyen1003'
+      },
+      {
+        name: 'Github',
+        link: 'https://github.com/nguyenchinhhiep'
+      },
+      {
+        name: 'Codepen',
+        link: 'https://codepen.io/nguyenchinhhiep'
+      }
+    ]
   }
 
 }

@@ -3,27 +3,9 @@
     <div class="section__content" data-scroll>
         <p>Here are a few technologies I've been working with recently:</p>
         <div class="skills">
-            <div class="skills__category">
+            <div class="skills__category" *ngFor="let type of mySkills">
                 <ul>
-                    <li>HTML/PUG</li>
-                    <li>CSS/SCSS</li>
-                    <li>Javascript</li>
-                    <li>Typescript</li>
-                </ul>
-            </div>
-            <div class="skills__category">
-                <ul>
-                    <li>Bootstrap 4</li>
-                    <li>Angular 2+</li>
-                    <li>Angular Material</li>
-                    <li>PrimeNG</li>
-                </ul>
-            </div>
-            <div class="skills__category">
-                <ul>
-                    <li>Gulp</li>
-                    <li>Git Extensions</li>
-                    <li>Chrome DevTools</li>
+                    <li *ngFor="let skill of type.list">{{skill}}</li>
                 </ul>
             </div>
         </div>

@@ -5,27 +5,9 @@
    
 </div>
 <ul class="port__footer-contact">
-   <li>
-      <a href="mailto:nguyenchinhhiep95@gmail.com" target="_blank" class="text-secondary">
-         <!-- <i class="fab fa-facebook-f"></i> -->
-         Email
-      </a>
-    <li>
-      <a href="https://www.facebook.com/hiepnguyen1003" target="_blank" class="text-secondary">
-         <!-- <i class="fab fa-facebook-f"></i> -->
-         Facebook
-      </a>
-   </li>
-   <li>
-      <a href="https://github.com/nguyenchinhhiep" target="_blank" class="text-secondary">
-         <!-- <i class="fab fa-github"></i> -->
-         Github
-      </a>
-   </li>
-   <li>
-      <a href="https://codepen.io/nguyenchinhhiep" target="_blank" class="text-secondary">
-         <!-- <i class="fab fa-codepen"></i> -->
-         Codepen
+   <li *ngFor="let contact of contactList">
+      <a href="{{contact.link}}" target="_blank" class="text-secondary">
+         {{contact.name}}
       </a>
    </li>
 </ul>
