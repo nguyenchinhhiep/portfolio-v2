@@ -235,27 +235,27 @@
     .section {
 
       &__title {
-        font-size: 20px !important;
+        font-size: 22px !important;
       }
 
-      &__content {
-        font-size: 14.5px !important;
+      // &__content {
+      //   font-size: 14.5px !important;
 
-        .project__name {
-          font-size: 14.5px !important;
-        }
+      //   .project__name {
+      //     font-size: 14.5px !important;
+      //   }
 
-        .skills,
-        .project__description,
-        .job__time,
-        .job__detail {
-          font-size: 14.5px !important;
-        }
+      //   .skills,
+      //   .project__description,
+      //   .job__time,
+      //   .job__detail {
+      //     font-size: 14.5px !important;
+      //   }
 
-        .job__detail>li {
-          padding-left: 15px !important;
-        }
-      }
+      //   .job__detail>li {
+      //     padding-left: 15px !important;
+      //   }
+      // }
     }
 
     &__hero {
