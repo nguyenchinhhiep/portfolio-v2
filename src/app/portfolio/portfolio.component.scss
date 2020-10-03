@@ -120,7 +120,7 @@
 
       h1 {
         font-size: 41px !important;
-        line-height: 1.7 !important;
+        line-height: 1.8 !important;
       }
 
       .buttons {
@@ -209,6 +209,7 @@
 
     .section {
 
+
       &__title {
         margin-bottom: 30px !important;
       }
@@ -219,7 +220,14 @@
         font-size: 26px !important;
         line-height: 2 !important;
       }
-      
+
+      .buttons {
+
+        >span {
+          margin: 0 10px !important;
+        }
+      }
+
     }
 
 
@@ -228,63 +236,15 @@
 
 
   @media(max-width: 490px) {
-
-    // .container {
-    //   max-width: 390px;
-    // }
-
     .section {
 
       &__title {
         font-size: 22px !important;
       }
-
-      // &__content {
-      //   font-size: 14.5px !important;
-
-      //   .project__name {
-      //     font-size: 14.5px !important;
-      //   }
-
-      //   .skills,
-      //   .project__description,
-      //   .job__time,
-      //   .job__detail {
-      //     font-size: 14.5px !important;
-      //   }
-
-      //   .job__detail>li {
-      //     padding-left: 15px !important;
-      //   }
-      // }
-    }
-
-    &__hero {
-      // h1 {
-        // font-size: 20.5px !important;
-        
-      // }
-
-      .buttons {
-
-        >span {
-          margin: 0 10px !important;
-        }
-
-        // >a {
-        //   font-size: 14px !important;
-        //   padding-left: 0 !important;
-        //   padding-right: 0 !important;
-        // }
-      }
     }
 
 
     &__footer {
-
-      // .copyright {
-      //   font-size: 13px !important;
-      // }
 
       &-contact {
         justify-content: space-between !important;
@@ -306,16 +266,6 @@
   }
 
   @media(max-width: 395px) {
-
-    // .container {
-    //   max-width: 350px;
-    // }
-
-    // &__hero {
-    //   h1 {
-    //     font-size: 18px !important;
-    //   }
-    // }
 
     &__skills {
 
