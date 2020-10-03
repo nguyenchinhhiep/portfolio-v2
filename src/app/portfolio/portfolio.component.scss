@@ -217,6 +217,7 @@
     &__hero {
       h1 {
         font-size: 26px !important;
+        line-height: 2 !important;
       }
       
     }
@@ -259,10 +260,10 @@
     }
 
     &__hero {
-      h1 {
+      // h1 {
         // font-size: 20.5px !important;
-        line-height: 2 !important;
-      }
+        
+      // }
 
       .buttons {
 
