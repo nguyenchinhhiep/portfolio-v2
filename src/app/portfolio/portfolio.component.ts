@@ -3,6 +3,7 @@ import { PortfolioService } from './portfolio.service';
 import { Observable } from 'rxjs';
 import ScrollOut from "scroll-out";
 import { DOCUMENT } from '@angular/common';
+import smoothscroll from 'smoothscroll-polyfill';
 
 @Component({
   selector: 'app-portfolio',
@@ -19,6 +20,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
   constructor(private portfolioService: PortfolioService, @Inject(DOCUMENT) private _document: any, private el: ElementRef) { }
 
   ngOnInit(): void {
+    smoothscroll.polyfill();
     this.currentTheme$ = this.portfolioService.getCurrentTheme;
   }
 

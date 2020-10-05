@@ -21,7 +21,7 @@ export class PortSkillsComponent implements OnInit {
       },
       {
         type: 'tools',
-        list: ['Gulp', 'Git Extensions', 'Chrome DevTools']
+        list: ['Gulp','Webpack','Git Extensions', 'Chrome DevTools']
       }
     ]
   }

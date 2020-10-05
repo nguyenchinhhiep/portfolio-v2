@@ -3,6 +3,7 @@ import { SharedModule } from '../shared/shared.module';
 import { PortfolioRoutingModule } from './portfolio-routing.module';
 
 import { PortfolioComponent } from './portfolio.component';
+import { PortLoaderComponent } from './port-loader/port-loader.component';
 import { PortHeaderComponent } from './port-header/port-header.component';
 import { PortFooterComponent } from './port-footer/port-footer.component';
 import { PortHeroComponent } from './port-hero/port-hero.component';
@@ -17,8 +18,9 @@ import { PortfolioService } from './portfolio.service';
 
 
 
+
 @NgModule({
-  declarations: [PortfolioComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent, PortAboutComponent, PortSkillsComponent, PortExperiencesComponent, PortProjectsComponent, PortContactComponent],
+  declarations: [PortfolioComponent,PortLoaderComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent, PortAboutComponent, PortSkillsComponent, PortExperiencesComponent, PortProjectsComponent, PortContactComponent],
   imports: [
     SharedModule,
     PortfolioRoutingModule

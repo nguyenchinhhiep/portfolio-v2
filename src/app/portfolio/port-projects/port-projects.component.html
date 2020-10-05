@@ -1,7 +1,7 @@
 <div class="section__inner" id="projects">
     <h2 class="section__title text-primary" data-scroll>Projects</h2>
     <div class="section__content">
-        <div class="project" *ngFor="let project of projectsList" data-scroll>
+        <div class="project" *ngFor="let project of displayedProjects" data-scroll>
             <div class="project__name text-primary">
                 <span>{{project.name}}</span>
                 <div class="project__navigate">
@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div class="see-more" data-scroll>
-            <button class="text-primary">See More...</button>
+            <button class="text-primary" (click)="onSeeMore(5)">See More...</button>
         </div>
     </div>
 

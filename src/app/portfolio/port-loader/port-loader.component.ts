@@ -5,12 +5,12 @@ import { NavigationEnd, Router } from '@angular/router';
 import { filter, take } from 'rxjs/operators';
 
 @Component({
-  selector: 'app-loader',
-  templateUrl: './loader.component.html',
-  styleUrls: ['./loader.component.scss'],
+  selector: 'app-port-loader',
+  templateUrl: './port-loader.component.html',
+  styleUrls: ['./port-loader.component.scss'],
   encapsulation: ViewEncapsulation.None
 })
-export class LoaderComponent implements OnInit {
+export class PortLoaderComponent implements OnInit {
   @HostBinding('attr.class') classes = 'loader';
 
   splashScreenEl: any;
@@ -44,7 +44,7 @@ export class LoaderComponent implements OnInit {
         .subscribe(() => {
           setTimeout(() => {
             this.hide();
-          }, 1000);
+          }, 2000);
         });
     }
   }
