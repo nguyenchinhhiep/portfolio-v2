@@ -1,7 +1,7 @@
 import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
 
 @Component({
-  selector: 'app-e-footer',
+  selector: 'e-footer',
   templateUrl: './e-footer.component.html',
   styleUrls: ['./e-footer.component.scss'],
   encapsulation: ViewEncapsulation.None
