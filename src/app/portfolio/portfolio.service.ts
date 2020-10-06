@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class PortfolioService {
-    private _theme: BehaviorSubject<string> = new BehaviorSubject('dark');
+    private _theme: BehaviorSubject<string> = new BehaviorSubject('light');
     getCurrentTheme: Observable<string> = this._theme.asObservable();
 
     setTheme(theme: string) {
