@@ -24,11 +24,9 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
     this.currentTheme$ = this.portfolioService.getCurrentTheme;
     this.portfolioService.scrollOut$.subscribe(res => {
       if(res && this.scrollOut) {
-       setTimeout(()=> {
         this.scrollOut.index();
         this.scrollOut.update();
-       }, 100)
-       
+
       }
     })
   }

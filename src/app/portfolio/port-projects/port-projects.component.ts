@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewEncapsulation, HostBinding, ElementRef, AfterViewChecked, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostBinding, ElementRef, AfterViewChecked, ChangeDetectionStrategy, ViewChildren, QueryList, AfterViewInit } from '@angular/core';
 import ScrollOut from "scroll-out";
 import { PortfolioComponent } from '../portfolio.component';
 import { PortfolioService } from '../portfolio.service';
@@ -10,10 +10,12 @@ import { PortfolioService } from '../portfolio.service';
   encapsulation: ViewEncapsulation.None,
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PortProjectsComponent implements OnInit {
+export class PortProjectsComponent implements OnInit, AfterViewInit {
+  @ViewChildren('.project') elements: QueryList<any>;
   @HostBinding('attr.class') classes = 'port__projects section container';
   allProjects: Array<any>;
   displayedProjects: Array<any>;
+  
 
   constructor(private portfolioService: PortfolioService) { 
     this.allProjects = [
@@ -50,7 +52,7 @@ export class PortProjectsComponent implements OnInit {
         type: 'featured'
       },
       {
-        name: 'CRUD Angular Project',
+        name: 'Angular CRUD Project',
         description: 'My first Angular project that allows you to create, read, update and delete data from jsonplaceholder API. This is also my first time working with APIs.',
         techList: ['HTML','CSS', 'Angular', 'APIs'],
         externalLink:'https://demo-mdaizs67p.now.sh/',
@@ -82,6 +84,12 @@ export class PortProjectsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ngAfterViewInit() {
+    this.elements.changes.subscribe(() => {
+      this.portfolioService.updateScrollOut();
+    })
+  }
+
   onSeeMore(amount: number) {
     const amountDisplayedProjects = this.displayedProjects.length;
     if(amountDisplayedProjects >= this.allProjects.length){
@@ -89,8 +97,5 @@ export class PortProjectsComponent implements OnInit {
     } else {
       this.displayedProjects = this.displayedProjects.concat(this.allProjects.slice(amountDisplayedProjects, amountDisplayedProjects + amount));
     }
-    this.portfolioService.updateScrollOut();
   }
- 
-
 }
