@@ -5,7 +5,7 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
    {
       path: '',
-      redirectTo: '/portfolio',
+      redirectTo: '/ecommerce',
       pathMatch: 'full'
    },
    {
@@ -15,6 +15,10 @@ const routes: Routes = [
    {
       path: 'chat-app',
       loadChildren: () => import('./chat-app/chat-app.module').then(m => m.ChatAppModule)
+   },
+   {
+      path: 'ecommerce',
+      loadChildren: () => import('./ecommerce/ecommerce.module').then(m => m.EcommerceModule)
    },
    {
       path: '**',
