@@ -11,7 +11,6 @@ import { PortAboutComponent } from './port-about/port-about.component';
 import { PortSkillsComponent } from './port-skills/port-skills.component';
 import { PortExperiencesComponent } from './port-experiences/port-experiences.component';
 import { PortProjectsComponent } from './port-projects/port-projects.component';
-import { PortContactComponent } from './port-contact/port-contact.component';
 
 import { PortfolioService } from './portfolio.service';
 
@@ -20,7 +19,7 @@ import { PortfolioService } from './portfolio.service';
 
 
 @NgModule({
-  declarations: [PortfolioComponent,PortLoaderComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent, PortAboutComponent, PortSkillsComponent, PortExperiencesComponent, PortProjectsComponent, PortContactComponent],
+  declarations: [PortfolioComponent,PortLoaderComponent, PortHeaderComponent, PortFooterComponent, PortHeroComponent, PortAboutComponent, PortSkillsComponent, PortExperiencesComponent, PortProjectsComponent],
   imports: [
     SharedModule,
     PortfolioRoutingModule

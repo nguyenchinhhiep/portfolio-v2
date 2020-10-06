@@ -54,12 +54,12 @@
 
     &__title {
       font-family: 'Poppins', sans-serif;
-      font-size: 32px;
+      font-size: 53px;
       font-weight: 700;
       width: 100%;
       margin-bottom: 40px;
       flex-shrink: 0;
-      letter-spacing: .5px;
+      letter-spacing: 1px;
     }
   }
 
@@ -112,7 +112,7 @@
     .section {
 
       &__title {
-        font-size: 28px !important;
+        font-size: 41px !important;
       }
     }
 
@@ -152,6 +152,13 @@
       padding-right: 20px !important;
     }
 
+    .section {
+
+      &__title {
+        font-size: 36px !important;
+      }
+    }
+
     &__hero {
       h1 {
         font-size: 36px !important;
@@ -169,7 +176,7 @@
     .section {
 
       &__title {
-        font-size: 24px !important;
+        font-size: 31px !important;
       }
 
 
@@ -211,7 +218,7 @@
 
 
       &__title {
-        margin-bottom: 30px !important;
+        font-size: 26px !important;
       }
     }
 
@@ -236,12 +243,6 @@
 
 
   @media(max-width: 490px) {
-    .section {
-
-      &__title {
-        font-size: 22px !important;
-      }
-    }
 
 
     &__footer {

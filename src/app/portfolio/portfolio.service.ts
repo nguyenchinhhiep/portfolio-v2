@@ -4,8 +4,14 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class PortfolioService {
     private _theme: BehaviorSubject<string> = new BehaviorSubject('light');
+    private _scrollOut: Subject<boolean> = new Subject();
+    scrollOut$ = this._scrollOut.asObservable();
     getCurrentTheme: Observable<string> = this._theme.asObservable();
 
+    updateScrollOut() {
+        this._scrollOut.next(true);
+    }
+    
     setTheme(theme: string) {
         const portEl = document.querySelector('.port');
         portEl.classList.add('transition');

@@ -21,7 +21,7 @@
             </ul>
         </div>
         <div class="see-more" data-scroll>
-            <button class="text-primary" (click)="onSeeMore(5)">See More...</button>
+            <button class="text-primary" (click)="onSeeMore(5)">{{displayedProjects.length >= allProjects.length? 'See less...': 'See more...'}}</button>
         </div>
     </div>
 

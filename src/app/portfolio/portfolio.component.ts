@@ -22,6 +22,15 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
     smoothscroll.polyfill();
     this.currentTheme$ = this.portfolioService.getCurrentTheme;
+    this.portfolioService.scrollOut$.subscribe(res => {
+      if(res && this.scrollOut) {
+       setTimeout(()=> {
+        this.scrollOut.index();
+        this.scrollOut.update();
+       }, 100)
+       
+      }
+    })
   }
 
   ngAfterViewInit() {

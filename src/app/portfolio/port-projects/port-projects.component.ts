@@ -1,23 +1,24 @@
-import { Component, OnInit, ViewEncapsulation, HostBinding, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation, HostBinding, ElementRef, AfterViewChecked, ChangeDetectionStrategy } from '@angular/core';
 import ScrollOut from "scroll-out";
+import { PortfolioComponent } from '../portfolio.component';
+import { PortfolioService } from '../portfolio.service';
 
 @Component({
   selector: 'app-port-projects',
   templateUrl: './port-projects.component.html',
   styleUrls: ['./port-projects.component.scss'],
-  encapsulation: ViewEncapsulation.None
+  encapsulation: ViewEncapsulation.None,
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PortProjectsComponent implements OnInit {
   @HostBinding('attr.class') classes = 'port__projects section container';
-
-  scrollOut: any;
   allProjects: Array<any>;
   displayedProjects: Array<any>;
 
-  constructor(private el: ElementRef) { 
+  constructor(private portfolioService: PortfolioService) { 
     this.allProjects = [
       {
-        name: 'E-Commerce Web Application ',
+        name: 'eCommerce Web Application ',
         description: ' A simple e-commerce web application with some basic features built with Angular framework and using Google Firebase to do the authentication.',
         techList: ['HTML','CSS', 'Angualar','Firebase'],
         externalLink:'https://nguyenchinhhiep.github.io/movie-search/dist/index.html',
@@ -83,26 +84,13 @@ export class PortProjectsComponent implements OnInit {
 
   onSeeMore(amount: number) {
     const amountDisplayedProjects = this.displayedProjects.length;
-    if(amountDisplayedProjects === this.allProjects.length) return;
-    this.displayedProjects = this.displayedProjects.concat(this.allProjects.slice(amountDisplayedProjects, amountDisplayedProjects + amount));
-    this.scrollOut = new ScrollOut({
-      scope: this.el.nativeElement,
-      threshold: .2,
-      onShown: function (element, ctx, scrollingElement) {
-        const delay = element.dataset.delay;
-        if (!!delay) {
-          element.style.transition = `opacity .4s cubic-bezier(.3,0,.5,1) ${delay}ms, transform .4s cubic-bezier(.3,0,.5,1) ${delay}ms`;
-        } else {
-          element.style.transition = `opacity .4s cubic-bezier(.3,0,.5,1), transform .4s cubic-bezier(.3,0,.5,1)`;
-        }
-
-        element.style.opacity = 1;
-        element.style.visibility = 'visible';
-        element.style.transform = 'translate3d(0,0, 0)';
-      },
-    })
-    console.log(this.scrollOut);
-    this.scrollOut.update();
+    if(amountDisplayedProjects >= this.allProjects.length){
+      this.displayedProjects = this.allProjects.slice(0, 5);
+    } else {
+      this.displayedProjects = this.displayedProjects.concat(this.allProjects.slice(amountDisplayedProjects, amountDisplayedProjects + amount));
+    }
+    this.portfolioService.updateScrollOut();
   }
+ 
 
 }
