@@ -1,4 +1,5 @@
 import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'header-auth',
@@ -8,9 +9,19 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
 })
 export class HeaderAuthComponent implements OnInit {
   @HostBinding('attr.class') classes = 'header__auth';
-  constructor() { }
+  constructor(private modalService: NgbModal) { }
+  
+  isLogin: boolean = true;
 
   ngOnInit(): void {
+  }
+
+  onToggleAuth() {
+    this.isLogin = !this.isLogin;
+  }
+
+  open(content) {
+    this.modalService.open(content, { centered: true, windowClass: 'auth-modal' });
   }
 
 }

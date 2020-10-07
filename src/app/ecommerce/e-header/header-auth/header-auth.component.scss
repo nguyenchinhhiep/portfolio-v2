@@ -1,0 +1,26 @@
+.auth-modal {
+  >.modal-dialog {
+    max-width: 450px;
+
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  .auth__title {
+      font-family: 'Poppins', 'Apercu', sans-serif;
+      font-size: 36px;
+  }
+
+  p {
+      font-size: 14px;
+  }
+
+  a {
+      cursor: pointer;
+      font-weight: 500;
+  }
+
+
+}

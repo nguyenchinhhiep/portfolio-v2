@@ -6,6 +6,7 @@ import { EFooterComponent } from './e-footer/e-footer.component';
 import { EcommerceRoutingModule } from './ecommerce-routing.module';
 import { HeaderCartComponent } from './e-header/header-cart/header-cart.component';
 import { HeaderAuthComponent } from './e-header/header-auth/header-auth.component';
+import { NgbModalModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 
@@ -13,6 +14,7 @@ import { HeaderAuthComponent } from './e-header/header-auth/header-auth.componen
   declarations: [EcommerceComponent, EHeaderComponent, EFooterComponent, HeaderCartComponent, HeaderAuthComponent],
   imports: [
     CommonModule,
+    NgbModalModule,
     EcommerceRoutingModule
   ]
 })

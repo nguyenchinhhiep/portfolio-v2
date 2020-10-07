@@ -19,21 +19,30 @@
         &__logo {
             font-size: 24px;
             font-weight: bold;
+
+            > span {
+                color: #FC6514;
+            }
         }
 
         &__auth {
             margin-left: auto;
-            font-size: 14px;
+            font-size: 16px;
             cursor: pointer;
+            font-weight: 500;
             > a {
                 display: block;
             }
         }
 
         &__cart {
-            font-size: 24px;
-            margin-left: 32px;
+            font-size: 18px;
+            margin-left: 35px;
             cursor: pointer;
+        }
+
+        &__auth:hover, &__cart:hover > i {
+            color: #FC6514;
         }
     }
 }
