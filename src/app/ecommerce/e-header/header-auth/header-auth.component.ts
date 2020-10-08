@@ -10,7 +10,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 export class HeaderAuthComponent implements OnInit {
   @HostBinding('attr.class') classes = 'header__auth';
   constructor(private modalService: NgbModal) { }
-  
+
   isLogin: boolean = true;
 
   ngOnInit(): void {
@@ -21,7 +21,11 @@ export class HeaderAuthComponent implements OnInit {
   }
 
   open(content) {
-    this.modalService.open(content, { centered: true, windowClass: 'auth-modal' });
+    this.modalService.open(content, { centered: true, windowClass: 'auth-modal' }).result.then((result) => {
+      this.isLogin = true;
+    }, (reason) => {
+      this.isLogin = true;
+    });;
   }
 
 }

@@ -1,4 +1,4 @@
-<a (click)="open(auth)">Login/Sign Up</a>
+<a (click)="open(auth)">Log In / Sign Up</a>
 
 <ng-template #auth let-modal>
     <div class="modal-header border-bottom-0 p-2 px-3">
@@ -8,7 +8,7 @@
     </div>
     <div class="modal-body pb-4">
         <form id="login" *ngIf="isLogin" class="px-3">
-            <h2 class="auth__title font-weight-bold mb-3">Log In</h2>
+            <h2 class="auth__title mb-3">Log In</h2>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email">
@@ -21,7 +21,7 @@
             <p class="mb-3">Don't have an account? <a class="text-info" (click)="onToggleAuth()">Sign Up</a></p>
         </form>
         <form id="sign-up" *ngIf="!isLogin" class="px-3">
-            <h2 class="auth__title font-weight-bold mb-3">Sign Up</h2>
+            <h2 class="auth__title mb-3">Sign Up</h2>
             <div class="form-group">
                 <label for="email">Email</label>
                 <input type="email" class="form-control" id="email">

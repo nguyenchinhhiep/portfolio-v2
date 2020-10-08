@@ -1,4 +1,5 @@
-import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, HostListener, OnInit, ViewEncapsulation } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'header-cart',
@@ -7,8 +8,12 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderCartComponent implements OnInit {
-  @HostBinding('attr.class') classes = 'header__cart text-muted';
-  constructor() { }
+  @HostBinding('attr.class') classes = 'header__cart';
+
+  @HostListener('click') onClick() {
+    this._router.navigate(['/ecommerce/cart']);
+  }
+  constructor(private _router: Router) { }
 
   ngOnInit(): void {
   }

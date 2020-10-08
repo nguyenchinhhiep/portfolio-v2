@@ -7,7 +7,7 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
   encapsulation: ViewEncapsulation.None
 })
 export class EFooterComponent implements OnInit {
-  @HostBinding('attr.class') classes = 'ecommerce__footer';
+  @HostBinding('attr.class') classes = 'ecommerce__footer border-top';
   constructor() { }
 
   ngOnInit(): void {

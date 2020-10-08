@@ -23,8 +23,8 @@ export class PortProjectsComponent implements OnInit, AfterViewInit {
         name: 'eCommerce Web Application ',
         description: ' A simple e-commerce web application with some basic features built with Angular framework and using Google Firebase to do the authentication.',
         techList: ['HTML','CSS', 'Angualar','Firebase'],
-        externalLink:'https://nguyenchinhhiep.github.io/movie-search/dist/index.html',
-        githubLink: 'https://github.com/nguyenchinhhiep/movie-search',
+        externalLink:'ecommerce',
+        githubLink: 'https://github.com/nguyenchinhhiep/portfolio-v2/tree/master/src/app/ecommerce',
         type: 'featured'
       },
       {
@@ -78,7 +78,7 @@ export class PortProjectsComponent implements OnInit, AfterViewInit {
       }
     ];
 
-    this.displayedProjects = this.allProjects.slice(0, 5);
+    this.displayedProjects = this.allProjects.slice(0, 4);
   }
 
   ngOnInit(): void {
@@ -93,7 +93,7 @@ export class PortProjectsComponent implements OnInit, AfterViewInit {
   onSeeMore(amount: number) {
     const amountDisplayedProjects = this.displayedProjects.length;
     if(amountDisplayedProjects >= this.allProjects.length){
-      this.displayedProjects = this.allProjects.slice(0, 5);
+      this.displayedProjects = this.allProjects.slice(0, 4);
     } else {
       this.displayedProjects = this.displayedProjects.concat(this.allProjects.slice(amountDisplayedProjects, amountDisplayedProjects + amount));
     }

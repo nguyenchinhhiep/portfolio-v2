@@ -11,7 +11,7 @@ body {
   height: 100%;
   overflow-y: auto;
   overflow-x: hidden;
-  color: #2D2436;
+  color: #2D2436 !important;
 }
 
 @mixin common-theme($theme) {

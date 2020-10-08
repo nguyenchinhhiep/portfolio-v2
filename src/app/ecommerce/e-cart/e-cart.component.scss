@@ -1,0 +1,36 @@
+.ecommerce {
+
+    &__cart {
+
+        .nav-tabs .nav-link {
+            font-size: 20px;
+            font-weight: bold;
+            border: 2px solid transparent !important;
+            color: #B2BEC3;
+        }
+        .nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link {
+            border-bottom: 2px solid #FC6514 !important;
+            color: #FC6514;
+        }
+
+        .cart__summary {
+            > h3 {
+                font-size: 20px;
+                font-weight: bold;
+                
+            }
+
+            .btn-checkout {
+                font-size: 18px;
+                font-weight: bold;
+                letter-spacing: .5px;
+                padding: 16px 24px !important;
+            }
+
+            .summary__price {
+                font-size: 20px;
+                font-weight: bold;
+            }
+        }
+    }
+}

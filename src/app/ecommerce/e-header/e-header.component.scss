@@ -1,6 +1,4 @@
 .ecommerce {
-    font-family: 'Apercu', sans-serif;
-    color: #2D3436;
 
     &__header {
         display: flex;
@@ -19,6 +17,8 @@
         &__logo {
             font-size: 24px;
             font-weight: bold;
+            color: inherit;
+            text-decoration: none;
 
             > span {
                 color: #FC6514;
@@ -27,9 +27,9 @@
 
         &__auth {
             margin-left: auto;
-            font-size: 16px;
+            font-size: 14px;
             cursor: pointer;
-            font-weight: 500;
+            font-weight: 600;
             > a {
                 display: block;
             }
@@ -39,6 +39,9 @@
             font-size: 18px;
             margin-left: 35px;
             cursor: pointer;
+            position: relative;
+            color: #B2BEC3;
+            margin-right: 10px;
         }
 
         &__auth:hover, &__cart:hover > i {

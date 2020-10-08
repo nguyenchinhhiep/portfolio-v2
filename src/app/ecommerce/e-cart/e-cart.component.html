@@ -1,0 +1,49 @@
+<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs">
+    <li [ngbNavItem]="1" class="flex-grow-1">
+        <a ngbNavLink class="px-0 py-4">1. Shopping Cart</a>
+        <ng-template ngbNavContent>
+            <div class="row mx-0 mt-4">
+                <ul class="cart__list col-lg-8">
+                    <li class="cart__item">
+                        <a>
+                            <div class="item__img">
+
+                            </div>
+
+                            <div class="item__price">
+
+                            </div>
+                            <div class="item__amount">
+
+                            </div>
+                            <div class="item__total">
+
+                            </div>
+                            <div class="item__action">
+
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <div class="cart__summary col-lg-4 bg-light py-3 border rounded">
+                    <h3 class="mb-4">Subtotal (3) items</h3>
+                    <p class="summary__price mb-4">$345</p>
+                    <button class="btn-checkout btn btn-info btn-block btn-lg py-2">Proceed To Checkout</button>
+                </div>
+            </div>
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="2" class="flex-grow-1" [disabled]="true">
+        <a ngbNavLink class="px-0 py-4">2. Billing</a>
+        <ng-template ngbNavContent>
+
+        </ng-template>
+    </li>
+    <li [ngbNavItem]="3" class="flex-grow-1" [disabled]="true">
+        <a ngbNavLink class="px-0 py-4">3. Payment</a>
+        <ng-template ngbNavContent>
+
+        </ng-template>
+    </li>
+</ul>
+<div [ngbNavOutlet]="nav" class="mt-2"></div>
