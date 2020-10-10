@@ -1,0 +1,35 @@
+.ecommerce {
+
+    &__product-detail {
+        font-size: 16px;
+    }
+
+    .product-detail {
+
+        &__name {
+            font-size: 20px;
+        }
+
+        &__price {
+            font-size: 36px;
+        }
+
+        &__cart {
+            letter-spacing: .5px;
+        }
+
+       
+    }
+
+    .quantity-control {
+        button {
+          z-index: 1;
+        }
+
+        input {
+          width: 50px;
+        }
+      }
+
+
+}

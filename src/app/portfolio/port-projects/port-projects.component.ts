@@ -22,7 +22,7 @@ export class PortProjectsComponent implements OnInit, AfterViewInit {
       {
         name: 'eCommerce Web Application ',
         description: ' A simple e-commerce web application with some basic features built with Angular framework and using Google Firebase to do the authentication.',
-        techList: ['HTML','CSS', 'Angualar','Firebase'],
+        techList: ['HTML','CSS', 'Angular','Firebase'],
         externalLink:'ecommerce',
         githubLink: 'https://github.com/nguyenchinhhiep/portfolio-v2/tree/master/src/app/ecommerce',
         type: 'featured'

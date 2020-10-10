@@ -8,11 +8,14 @@ import { HeaderCartComponent } from './e-header/header-cart/header-cart.componen
 import { HeaderAuthComponent } from './e-header/header-auth/header-auth.component';
 import { NgbModalModule, NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
 import { ECartComponent } from './e-cart/e-cart.component';
+import { EProductListComponent } from './e-product-list/e-product-list.component';
+import { EProductItemComponent } from './e-product-list/e-product-item/e-product-item.component';
+import { EProductDetailComponent } from './e-product-detail/e-product-detail.component';
 
 
 
 @NgModule({
-  declarations: [EcommerceComponent, EHeaderComponent, EFooterComponent, HeaderCartComponent, HeaderAuthComponent, ECartComponent],
+  declarations: [EcommerceComponent, EHeaderComponent, EFooterComponent, HeaderCartComponent, HeaderAuthComponent, ECartComponent, EProductListComponent, EProductItemComponent, EProductDetailComponent],
   imports: [
     CommonModule,
     NgbModalModule,
