@@ -25,24 +25,6 @@
             }
         }
 
-        &__auth {
-            margin-left: auto;
-            font-size: 14px;
-            cursor: pointer;
-            font-weight: 600;
-            > a {
-                display: block;
-            }
-        }
-
-        &__cart {
-            font-size: 18px;
-            margin-left: 35px;
-            cursor: pointer;
-            position: relative;
-            color: #B2BEC3;
-            margin-right: 10px;
-        }
 
         &__auth:hover, &__cart:hover > i {
             color: #FC6514;

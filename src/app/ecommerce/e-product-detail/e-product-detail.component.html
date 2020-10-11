@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row" *ngIf="(product$ | async) as product">
     <div class="col-md-8">
         <div class="product-detail__img">
             <div class="row mx-0">
@@ -9,7 +9,7 @@
                 </div>
                 <div class="flex-grow-1">
                     <div class="img__preview">
-                        <img src="https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-D806F050036E-GS0-TC0-BLK/front/medium.jpg" alt="">
+                        <img src="{{product.photos[0]}}" alt="">
                     </div>
                 </div>
             </div>
@@ -18,11 +18,11 @@
     </div>
     <div class="col-md-4">
         <div class="product-detail__info">
-            <div class="product-detail__name">Product Name</div>
-            <div class="product-detail__price text-danger font-weight-bold mt-3 mb-4">$1200.99</div>
+            <div class="product-detail__name">{{product.name}}</div>
+            <div class="product-detail__price text-danger font-weight-bold mt-3 mb-4">${{product.price}}</div>
             <div class="product-detail__overview my-4">
                 <div class="font-weight-bold mr-3 mb-3">Overview:</div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!</p>
+                <p>{{product.description}}</p>
             </div>
             <div class="product-detail__quantity my-4 d-flex align-items-center">
                 <div class="font-weight-bold mr-3">Quantity:</div>

@@ -1,26 +1,49 @@
+.ecommerce {
+
+  .header {
+    
+    &__auth {
+      margin-left: auto;
+      font-size: 14px;
+      cursor: pointer;
+      font-weight: 600;
+  
+      >a {
+        display: block;
+      }
+    }
+  }
+
+  
+}
+
 .auth-modal {
   font-family: 'Lato', 'Apercu', sans-serif;
+
   >.modal-dialog {
     max-width: 450px;
 
   }
 
 
- 
+
 
   .auth__title {
-      font-size: 28px;
-      font-weight: 900;
-      text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 900;
+    text-transform: uppercase;
   }
 
-  p, input, label, a {
-      font-size: 15px;
+  p,
+  input,
+  label,
+  a {
+    font-size: 15px;
   }
 
   a {
-      cursor: pointer;
-      font-weight: bold;
+    cursor: pointer;
+    font-weight: bold;
   }
 
 

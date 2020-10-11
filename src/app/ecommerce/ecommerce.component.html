@@ -1,5 +1,6 @@
 <e-header></e-header>
-<div class="ecommerce__body container pb-5">
+<div class="ecommerce__body container pb-5 position-relative">
+    <e-loader *ngIf="loading"></e-loader>
     <router-outlet></router-outlet>
 </div>
 <e-footer></e-footer>

@@ -15,7 +15,7 @@ const routes: Routes = [
                 component: EProductListComponent
             },
             {
-                path: 'detail/:id',
+                path: 'product-detail/:id',
                 component: EProductDetailComponent
             },
             {

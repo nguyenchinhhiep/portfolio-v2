@@ -1,4 +1,5 @@
 import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { EcommerceService } from './ecommerce.service';
 
 @Component({
   selector: 'app-ecommerce',
@@ -9,9 +10,14 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
 })
 export class EcommerceComponent implements OnInit {
   @HostBinding('attr.class') classes = 'ecommerce';
-  constructor() { }
+  loading: boolean;
+  constructor(private _ecommerceService: EcommerceService) { }
 
   ngOnInit(): void {
+    this._ecommerceService.loading$.subscribe(state => {
+      console.log(state);
+      this.loading = state;
+    })
   }
 
 }

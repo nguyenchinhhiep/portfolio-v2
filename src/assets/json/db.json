@@ -1,0 +1,94 @@
+{
+    "products": [
+        {
+            "id": 1,
+            "name": "Avocado Love",
+            "price": "25.00",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-3F716105436F-S3SV0-SAP110-WHT/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 2,
+            "name": "Cat Skull",
+            "price": "34.99",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-HALLOWEEN19015-GS0-TC12-RED/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 3,
+            "name": "Get me some APIs now",
+            "price": "22.95",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/62F7E33737F0E6/62F7E33737F0E6-1130EB9918B0-GS2-TC0-ATH/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 4,
+            "name": "Dark Pumpkin",
+            "price": "39.99",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-HALLOWEEN19005-GS3-TC4-BLK/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 5,
+            "name": "Skeleton Cat",
+            "price": "39.99",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-HALLOWEEN19010-GS0-TC4-GOL/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 6,
+            "name": "Dark Pumpkin",
+            "price": "39.99",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-HALLOWEEN19005-GS3-TC4-BLK/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 7,
+            "name": "Dude I'm Bleeding",
+            "price": "24.99",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-HALLOWEEN19026-SS8-S1-WHT/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 8,
+            "name": "Hello Autumn",
+            "price": "22.95",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-1409B014462F-GS0-TC0-WHT/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 9,
+            "name": "Autumn is here",
+            "price": "24.99",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-77E13410132A-S3SV0-SAP110-WHT/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        },
+        {
+            "id": 10,
+            "name": "In Pizza We Trust",
+            "price": "25.00",
+            "photos": [
+                "https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/6262B2AA13F5F7/6262B2AA13F5F7-HALLOWEEN19026-SS8-S1-WHT/front/medium.jpg"
+            ],
+            "description": "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Culpa illum dolore id est commodi ex maxime! Nam pariatur sed cumque!"
+        }
+    ]
+}
