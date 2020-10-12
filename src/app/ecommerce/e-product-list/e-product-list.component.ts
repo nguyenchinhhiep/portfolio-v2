@@ -12,11 +12,20 @@ import { Product } from '../models/product.model';
 })
 export class EProductListComponent implements OnInit {
   @HostBinding('attr.class') classes = 'ecommerce__product-list mt-4 d-block';
-  products$: Observable<Array<Product>>;
+  products: Array<Product> = [];
+  pageSize: number = 8;
+  page: number = 1;
   constructor(private _ecommerceService: EcommerceService) { }
 
   ngOnInit(): void {
-    this.products$ = this._ecommerceService.getProducts().pipe(shareReplay());
+    this._ecommerceService.getProducts().subscribe(products => {
+      this.products = products;
+    });
+  }
+
+  handlePagination(products, page = 1, resPerpage = 8) {
+    const start = (page - 1) * resPerpage;
+    const end = page * resPerpage
   }
 
 }

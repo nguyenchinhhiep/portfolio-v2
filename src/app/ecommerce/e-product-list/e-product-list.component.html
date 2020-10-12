@@ -1,9 +1,8 @@
 <h3 class="font-weight-bold product-list__title mb-5">Latest Products</h3>
 <div class="row">
-    <ng-container *ngIf="products$ | async">
-        <div class="col-lg-3 col-md-6 pb-4" *ngFor="let product of (products$ | async)">
-            <e-product-item [product]="product"></e-product-item>
-        </div>
-    </ng-container>
-    
+    <div class="col-lg-3 col-md-6 pb-4" *ngFor="let product of products | slice: (page-1) * pageSize : (page-1) * pageSize + pageSize">
+        <e-product-item [product]="product"></e-product-item>
+    </div>
+
 </div>
+<ngb-pagination *ngIf="products.length > pageSize" [(page)]="page" [pageSize]="pageSize" [collectionSize]="products.length"></ngb-pagination>

@@ -15,7 +15,6 @@ export class EcommerceComponent implements OnInit {
 
   ngOnInit(): void {
     this._ecommerceService.loading$.subscribe(state => {
-      console.log(state);
       this.loading = state;
     })
   }

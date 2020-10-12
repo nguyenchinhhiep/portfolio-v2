@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NgbModalModule, NgbNavModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModalModule, NgbNavModule, NgbPaginationModule} from '@ng-bootstrap/ng-bootstrap';
 
 import { EcommerceComponent } from './ecommerce.component';
 import { EHeaderComponent } from './e-header/e-header.component';
@@ -22,6 +22,7 @@ import { ELoaderComponent } from './e-loader/e-loader.component';
     CommonModule,
     NgbModalModule,
     NgbNavModule,
+    NgbPaginationModule,
     EcommerceRoutingModule
   ]
 })
