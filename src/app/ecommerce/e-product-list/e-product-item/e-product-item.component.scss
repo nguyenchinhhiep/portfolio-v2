@@ -12,5 +12,9 @@
     &__name {
       cursor: pointer;
     }
+
+    &__cart {
+      z-index: 2;
+    }
   }
 }

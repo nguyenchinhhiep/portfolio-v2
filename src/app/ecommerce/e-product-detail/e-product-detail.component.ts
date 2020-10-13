@@ -11,7 +11,7 @@ import { Product } from '../models/product.model';
   encapsulation: ViewEncapsulation.None
 })
 export class EProductDetailComponent implements OnInit {
-  @HostBinding('attr.class') classes = 'ecommerce__product-detail d-block mt-4';
+  @HostBinding('attr.class') classes = 'ecommerce__product-detail d-block mt-5';
   productId: number;
   product$: Observable<Product>;
   constructor(private _route: ActivatedRoute,

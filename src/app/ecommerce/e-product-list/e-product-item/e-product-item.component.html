@@ -1,12 +1,12 @@
-<a class="product__link">
-    <div class="product__image" (click)="onGoToDetail()">
+<a class="product__link" (click)="onGoToDetail($event)">
+    <div class="product__image">
         <img src="{{product.photos[0]}}" alt="{{product.name}}">
     </div>
     <div class="product__desc">
-        <div class="product__name" (click)="onGoToDetail()">
+        <div class="product__name">
             {{product.name}}
         </div>
         <div class="product__price font-weight-bold text-danger">${{product.price}}</div>
-        <button class="btn product__cart btn-info btn-block mt-3" (click)="onAddToCart()">Add to cart</button>
+        <button class="btn product__cart btn-info btn-block mt-3" (click)="onAddToCart(product)">Add to cart</button>
     </div>
 </a>

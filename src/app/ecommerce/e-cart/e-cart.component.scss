@@ -7,25 +7,16 @@
         font-weight: bold;
         color: #B2BEC3;
         border-radius: 0;
-        font-size: 14px;
-        border-width: 2px !important;
+        font-size: 13px;
         font-weight: bold;
-      }
-
-
-      &:nth-child(even) {
-        >.nav-link {
-          border-left-color: transparent !important;
-          border-right-color: transparent !important;
-        }
-
+        text-transform: uppercase;
       }
     }
 
     .nav-tabs .nav-link.active,
     .nav-tabs .nav-item.show .nav-link {
-      border-bottom-color: #FC6514 !important;
-      color: #FC6514;
+      background-color: #FC6514 !important;
+      color: #fff;
     }
 
     .cart__list {
@@ -82,6 +73,11 @@
         font-size: 18px;
         font-weight: bold;
       }
+    }
+
+    .cart-empty {
+      font-size: 18px;
+      font-weight: 900;
     }
   }
 }

@@ -1,8 +1,8 @@
 <ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs border-0">
     <li [ngbNavItem]="1" class="flex-grow-1 text-center">
-        <a ngbNavLink class="px-0 py-3 text-uppercase border">1. Shopping Cart</a>
+        <a ngbNavLink class="px-0 py-3 bg-light">1. Shopping Cart</a>
         <ng-template ngbNavContent>
-            <div class="row mx-0 mt-5">
+            <div *ngIf="cartItems.length > 0" class="row mx-0 mt-5">
                 <div class="col-12 cart__list mb-4 px-0">
                     <table class="w-100 table table-bordered">
                         <thead>
@@ -16,76 +16,28 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <tr>
+                            <tr *ngFor = "let item of cartItems">
                                 <td class="item__action text-center"><button class="btn"><i
                                             class="fas fa-trash-alt"></i></button></td>
                                 <td class="item__img">
-                                    <img src="https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/62F7E33737F0E6/62F7E33737F0E6-1130EB9918B0-GS2-TC0-ATH/front/medium.jpg"
+                                    <img src="{{item.product.photos[0]}}"
                                         alt="">
                                 </td>
                                 <td class="item__name">
-                                    T-Shirt for Women
+                                    {{item.product.name}}
                                 </td>
                                 <td class="item__price">
-                                    $358.00
+                                    ${{item.product.price}}
                                 </td>
                                 <td class="item__quantity">
                                     <div class="quantity-control d-flex justify-content-center">
                                         <button class="btn btn-sm border"><i class="fas fa-minus"></i></button>
-                                        <input type="text" class="border">
+                                        <input type="text" class="border" [(ngModel)]="item.quantity">
                                         <button class="btn btn-sm border"><i class="fas fa-plus"></i></button>
                                     </div>
                                 </td>
                                 <td class="item__total">
-                                    $358.00
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="item__action text-center"><button class="btn"><i
-                                            class="fas fa-trash-alt"></i></button></td>
-                                <td class="item__img">
-                                    <img src="https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/62F7E33737F0E6/62F7E33737F0E6-1130EB9918B0-GS2-TC0-ATH/front/medium.jpg"
-                                        alt="">
-                                </td>
-                                <td class="item__name">
-                                    T-Shirt for Women
-                                </td>
-                                <td class="item__price">
-                                    $358.00
-                                </td>
-                                <td class="item__quantity">
-                                    <div class="quantity-control d-flex justify-content-center">
-                                        <button class="btn btn-sm border"><i class="fas fa-minus"></i></button>
-                                        <input type="text" class="border">
-                                        <button class="btn btn-sm border"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </td>
-                                <td class="item__total">
-                                    $358.00
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="item__action text-center"><button class="btn"><i
-                                            class="fas fa-trash-alt"></i></button></td>
-                                <td class="item__img">
-                                    <img src="https://cdn.32pt.com/public/sl-prod-od-0/images/retail-products/62F7E33737F0E6/62F7E33737F0E6-1130EB9918B0-GS2-TC0-ATH/front/medium.jpg"
-                                        alt="">
-                                </td>
-                                <td class="item__name">
-                                    T-Shirt for Women
-                                </td>
-                                <td class="item__price">
-                                    $358.00
-                                </td>
-                                <td class="item__quantity">
-                                    <div class="quantity-control d-flex justify-content-center">
-                                        <button class="btn btn-sm border"><i class="fas fa-minus"></i></button>
-                                        <input type="text" class="border">
-                                        <button class="btn btn-sm border"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </td>
-                                <td class="item__total">
-                                    $358.00
+                                    ${{item.totalPrice}}
                                 </td>
                             </tr>
                         </tbody>
@@ -106,19 +58,24 @@
 
                 </div>
             </div>
+
+            <div *ngIf="cartItems.length === 0" class="text-center py-5 cart-empty">
+                <p>Your cart is empty!</p>
+                <a routerLink="../" class="btn btn-outline-secondary mt-4">Continue Shopping</a>
+            </div>
         </ng-template>
     </li>
-    <li [ngbNavItem]="2" class="flex-grow-1 text-center" [disabled]="false">
-        <a ngbNavLink class="px-0 py-3 text-uppercase border">2. Billing</a>
+    <li [ngbNavItem]="2" class="flex-grow-1 text-center" [disabled]="true">
+        <a ngbNavLink class="px-0 py-3 bg-light">2. Billing</a>
         <ng-template ngbNavContent>
 
         </ng-template>
     </li>
-    <li [ngbNavItem]="3" class="flex-grow-1 text-center" [disabled]="false">
-        <a ngbNavLink class="px-0 py-3 text-uppercase border">3. Payment</a>
+    <li [ngbNavItem]="3" class="flex-grow-1 text-center" [disabled]="true">
+        <a ngbNavLink class="px-0 py-3 bg-light">3. Payment</a>
         <ng-template ngbNavContent>
 
         </ng-template>
     </li>
 </ul>
-<div [ngbNavOutlet]="nav" class="mt-2 mb-5"></div>
+<div [ngbNavOutlet]="nav" class="mb-5"></div>

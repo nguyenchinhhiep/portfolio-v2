@@ -10,13 +10,13 @@ import { EcommerceService } from './ecommerce.service';
 })
 export class EcommerceComponent implements OnInit {
   @HostBinding('attr.class') classes = 'ecommerce';
-  loading: boolean;
+  loading: boolean = false;
   constructor(private _ecommerceService: EcommerceService) { }
 
   ngOnInit(): void {
-    this._ecommerceService.loading$.subscribe(state => {
-      this.loading = state;
-    })
+    // this._ecommerceService.loading$.subscribe(state => {
+    //   this.loading = state;
+    // })
   }
 
 }

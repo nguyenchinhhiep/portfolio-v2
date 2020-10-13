@@ -13,6 +13,7 @@ import { EProductListComponent } from './e-product-list/e-product-list.component
 import { EProductItemComponent } from './e-product-list/e-product-item/e-product-item.component';
 import { EProductDetailComponent } from './e-product-detail/e-product-detail.component';
 import { ELoaderComponent } from './e-loader/e-loader.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -20,6 +21,7 @@ import { ELoaderComponent } from './e-loader/e-loader.component';
   declarations: [EcommerceComponent, EHeaderComponent, EFooterComponent, HeaderCartComponent, HeaderAuthComponent, ECartComponent, EProductListComponent, EProductItemComponent, EProductDetailComponent, ELoaderComponent],
   imports: [
     CommonModule,
+    FormsModule,
     NgbModalModule,
     NgbNavModule,
     NgbPaginationModule,

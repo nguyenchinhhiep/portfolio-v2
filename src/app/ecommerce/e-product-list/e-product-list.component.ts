@@ -11,7 +11,7 @@ import { Product } from '../models/product.model';
   encapsulation: ViewEncapsulation.None
 })
 export class EProductListComponent implements OnInit {
-  @HostBinding('attr.class') classes = 'ecommerce__product-list mt-4 d-block';
+  @HostBinding('attr.class') classes = 'ecommerce__product-list mt-5 d-block';
   products: Array<Product> = [];
   pageSize: number = 8;
   page: number = 1;
