@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { Injectable, TemplateRef } from '@angular/core';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { delay, map, tap } from 'rxjs/operators';
 import { CartItem } from './models/cart-item.model';
@@ -14,8 +14,7 @@ export class EcommerceService {
     private _loading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
     loading$: Observable<boolean> = this._loading.asObservable();
 
-    private _cartItem: Subject<CartItem> = new Subject();
-    cartItem$: Observable<CartItem> = this._cartItem.asObservable();
+    toasts: any[] = [];
 
     constructor(private _http: HttpClient) {
     }
@@ -33,17 +32,43 @@ export class EcommerceService {
         this._loading.next(state);
     }
 
+    getCartItems() {
+        return JSON.parse(localStorage.getItem('cartItems'));
+    }
+
     addToCart(product: Product, quantity: number) {
-        const cartItem: CartItem = {
-            product: product,
-            quantity: quantity
-        }
+
         let cartItems = [];
         if (localStorage.getItem('cartItems')) {
             cartItems = JSON.parse(localStorage.getItem('cartItems'));
         }
-        cartItems.push(cartItem);
+        const productExistInCart = cartItems.find(item => item.product.id === product.id);
+        if (!productExistInCart) {
+            const cartItem: CartItem = {
+                product: product,
+                quantity: quantity
+            }
+            cartItems.push(cartItem);
+        } else {
+            productExistInCart.quantity += quantity;
+        }
+
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+
+    removeItemFromCart(item: CartItem) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems'));
+        cartItems = cartItems.filter(cartItem => cartItem.product.id !== item.product.id);
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }
+
+    // Toast
+    showToast(textOrTpl: string | TemplateRef<any>, options: any = {}) {
+        this.toasts.push({ textOrTpl, ...options });
+      }
+
+    removeToast(toast) {
+        this.toasts = this.toasts.filter(t => t != toast);
     }
 
 }

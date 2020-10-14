@@ -17,7 +17,7 @@
                         </thead>
                         <tbody>
                             <tr *ngFor = "let item of cartItems">
-                                <td class="item__action text-center"><button class="btn"><i
+                                <td class="item__action text-center"><button class="btn" (click)="onRemoveItem(item)"><i
                                             class="fas fa-trash-alt"></i></button></td>
                                 <td class="item__img">
                                     <img src="{{item.product.photos[0]}}"
@@ -46,11 +46,11 @@
                 <div class="ml-auto cart__summary col-lg-5 px-0 bg-light rounded">
                     <div class="d-flex justify-content-between align-items-center w-100 border-bottom p-3">
                         <h3 class="mb-0">Subtotal</h3>
-                        <p class="total__price mb-0">$345</p>
-                    </div>
+                        <p class="total__price mb-0">${{subTotal}}</p>
+                    </div>  
                     <div class="d-flex justify-content-between align-items-center w-100 p-3">
                         <h3 class="mb-0">Total</h3>
-                        <p class="total__price mb-0">$345</p>
+                        <p class="total__price mb-0">${{total}}</p>
                     </div>
                     <div class="px-3 mb-n5">
                         <button class="btn-checkout btn btn-info btn-block btn-lg py-3">Proceed to Checkout</button>

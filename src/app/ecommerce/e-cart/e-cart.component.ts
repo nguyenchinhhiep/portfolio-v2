@@ -13,12 +13,30 @@ export class ECartComponent implements OnInit {
   active = 1;
 
   cartItems: Array<CartItem> = [];
+  total: number;
+  subTotal: number;
   constructor(private _ecommerceService: EcommerceService) { }
 
   ngOnInit(): void {
-    // this._ecommerceService.cartItem$.subscribe(cartItem => {
-    //   this.cartItems.push(cartItem);
-    // })
+    this.getCartItems();
+  }
+
+  getCartItems() {
+    this.subTotal = 0;
+    this.total = 0;
+    this.cartItems = this._ecommerceService.getCartItems();
+    this.cartItems.forEach((item: any) => {
+      item.totalPrice = (item.quantity * item.product.price).toFixed(2);
+      this.subTotal+=item.quantity * item.product.price;
+    });
+    this.subTotal = <any>this.subTotal.toFixed(2);
+    this.total = this.subTotal;
+  }
+
+  onRemoveItem(item) {
+    this._ecommerceService.removeItemFromCart(item);
+    this.getCartItems();
+    this._ecommerceService.showToast('Deleted successfully', {classname: 'bg-danger text-light p-2 font-weight-bold'});
   }
 
 
