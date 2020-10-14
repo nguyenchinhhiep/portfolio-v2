@@ -1,4 +1,4 @@
-<div class="row" *ngIf="(product$ | async) as product">
+<div class="row" *ngIf="product">
     <div class="col-md-8">
         <div class="product-detail__img">
             <div class="row mx-0">
@@ -27,9 +27,9 @@
             <div class="product-detail__quantity my-4 d-flex align-items-center">
                 <div class="font-weight-bold mr-3">Quantity:</div>
                 <div class="quantity-control d-flex">
-                    <button class="btn btn-sm border"><i class="fas fa-minus"></i></button>
-                    <input type="text" class="border">
-                    <button class="btn btn-sm border"><i class="fas fa-plus"></i></button>
+                    <button class="btn btn-sm border rounded-0" (click)="onChangeAmount('desc')"><i class="fas fa-minus"></i></button>
+                    <input onlyNumber type="text" class="border border-left-0 border-right-0" [(ngModel)]="product.quantity">
+                    <button class="btn btn-sm border rounded-0"  (click)="onChangeAmount('inc')"><i class="fas fa-plus"></i></button>
                 </div>
             </div>
             <button class="btn product-detail__cart btn-info btn-block mt-5 font-weight-bold py-3" (click)="onAddToCart()">Add To Cart</button>

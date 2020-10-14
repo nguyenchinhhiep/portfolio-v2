@@ -1,4 +1,4 @@
 <i class="fas fa-shopping-cart"></i>
-<div class="cart__amount position-absolute bg-info text-white d-flex justify-content-center align-items-center font-weight-bold">
-    <span>6</span>
+<div *ngIf="cartAmount > 0" class="cart__amount position-absolute bg-info text-white d-flex justify-content-center align-items-center font-weight-bold">
+    <span>{{cartAmount}}</span>
 </div>

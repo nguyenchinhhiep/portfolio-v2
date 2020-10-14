@@ -15,14 +15,14 @@ import { EProductDetailComponent } from './e-product-detail/e-product-detail.com
 import { ELoaderComponent } from './e-loader/e-loader.component';
 import { FormsModule } from '@angular/forms';
 import { EToastComponent } from './e-toast/e-toast.component';
+import { SharedModule } from '../shared/shared.module';
 
 
 
 @NgModule({
   declarations: [EcommerceComponent, EHeaderComponent, EFooterComponent, HeaderCartComponent, HeaderAuthComponent, ECartComponent, EProductListComponent, EProductItemComponent, EProductDetailComponent, ELoaderComponent, EToastComponent],
   imports: [
-    CommonModule,
-    FormsModule,
+    SharedModule,
     NgbModalModule,
     NgbNavModule,
     NgbPaginationModule,

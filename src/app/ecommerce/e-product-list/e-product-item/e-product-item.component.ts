@@ -30,7 +30,7 @@ export class EProductItemComponent implements OnInit {
 
   onAddToCart(product: Product) {
     this._ecommerceService.addToCart(product, 1);
-    this._ecommerceService.showToast('Added to your cart', {classname: 'bg-success text-light p-2 font-weight-bold'})
+    this._ecommerceService.showToast('Added to your cart', {classname: 'bg-success text-light p-2 font-weight-bold'});
   }
 
 }

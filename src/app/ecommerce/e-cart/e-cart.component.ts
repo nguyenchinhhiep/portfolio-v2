@@ -1,3 +1,4 @@
+import { isNgTemplate } from '@angular/compiler';
 import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
 import { EcommerceService } from '../ecommerce.service';
 import { CartItem } from '../models/cart-item.model';
@@ -36,7 +37,18 @@ export class ECartComponent implements OnInit {
   onRemoveItem(item) {
     this._ecommerceService.removeItemFromCart(item);
     this.getCartItems();
-    this._ecommerceService.showToast('Deleted successfully', {classname: 'bg-danger text-light p-2 font-weight-bold'});
+    this._ecommerceService.showToast('Deleted', {classname: 'bg-danger text-light p-2 font-weight-bold'});
+  }
+
+  onChangeAmount(type: string, cartItem: CartItem) {
+    if(type === 'desc' && cartItem.quantity >= 2) {
+      cartItem.quantity--;
+    } else if(type === 'inc') {
+      cartItem.quantity++;
+    }
+    const quantity = cartItem.quantity;
+    this._ecommerceService.updateQuantityCartItem(cartItem.product.id,quantity );
+    this.getCartItems();
   }
 
 

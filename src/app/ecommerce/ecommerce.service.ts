@@ -14,6 +14,9 @@ export class EcommerceService {
     private _loading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
     loading$: Observable<boolean> = this._loading.asObservable();
 
+    private _cartChange: Subject<boolean> = new Subject();
+    cartChange$: Observable<boolean> = this._cartChange.asObservable();
+
     toasts: any[] = [];
 
     constructor(private _http: HttpClient) {
@@ -54,12 +57,24 @@ export class EcommerceService {
         }
 
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        this._cartChange.next(true);
     }
 
     removeItemFromCart(item: CartItem) {
         let cartItems = JSON.parse(localStorage.getItem('cartItems'));
         cartItems = cartItems.filter(cartItem => cartItem.product.id !== item.product.id);
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        this._cartChange.next(true);
+    }
+
+    updateQuantityCartItem(id, quantity) {
+        const cartItems = this.getCartItems();
+        const selectedItem = cartItems.find(item => item.product.id === id);
+        const selectedIndex = cartItems.findIndex(item => item.product.id === id);
+        const updatedItem = Object.assign({},selectedItem,{quantity: quantity});
+        cartItems[selectedIndex] = updatedItem;
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+        this._cartChange.next(true);
     }
 
     // Toast
