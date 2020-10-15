@@ -1,13 +1,12 @@
-<div class="port__footer-copyright text-secondary">
+<div class="text-secondary">
    <p class="copyright">&copy; 2020 Build & Design by Hiep Nguyen
       <br> Deploy by Quan Nguyen
    </p>
-   
+   <ul class="port__footer-contact">
+      <li *ngFor="let contact of contactList">
+         <a title="{{contact.name}}" href="{{contact.link}}" target="_blank" class="text-secondary">
+            <i class="{{contact.icon}}"></i>
+         </a>
+      </li>
+   </ul>
 </div>
-<ul class="port__footer-contact">
-   <li *ngFor="let contact of contactList">
-      <a href="{{contact.link}}" target="_blank" class="text-secondary">
-         {{contact.name}}
-      </a>
-   </li>
-</ul>

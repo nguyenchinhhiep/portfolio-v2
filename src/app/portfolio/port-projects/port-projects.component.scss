@@ -5,10 +5,11 @@
 
 
     .project {
-      margin-bottom: 40px;
+      margin-bottom: 50px;
       
       &__name {
         font-weight: bold;
+        font-size: 18px;
         margin-bottom: 10px;
         display: flex;
         justify-content: space-between;
@@ -45,7 +46,7 @@
           padding: 2px 7px;
           border-radius: 4px;
           letter-spacing: .5px;
-          font-weight: bold;
+          font-weight: 500;
           border: 1px solid;
         }
       }

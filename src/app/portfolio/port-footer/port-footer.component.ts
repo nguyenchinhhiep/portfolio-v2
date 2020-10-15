@@ -17,19 +17,23 @@ export class PortFooterComponent implements OnInit {
     this.contactList = [
       {
         name: 'Email',
-        link: 'mailto:nguyenchinhhiep95@gmail.com'
+        link: 'mailto:nguyenchinhhiep95@gmail.com',
+        icon: 'far fa-envelope'
       },
       {
         name: 'Facebook',
-        link: 'https://www.facebook.com/hiepnguyen1003'
+        link: 'https://www.facebook.com/hiepnguyen1003',
+        icon: 'fab fa-facebook-square'
       },
       {
         name: 'Github',
-        link: 'https://github.com/nguyenchinhhiep'
+        link: 'https://github.com/nguyenchinhhiep',
+        icon: 'fab fa-github'
       },
       {
         name: 'Codepen',
-        link: 'https://codepen.io/nguyenchinhhiep'
+        link: 'https://codepen.io/nguyenchinhhiep',
+        icon: 'fab fa-codepen'
       }
     ]
   }

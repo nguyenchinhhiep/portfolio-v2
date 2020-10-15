@@ -122,20 +122,6 @@
         font-size: 41px !important;
         line-height: 1.8 !important;
       }
-
-      .buttons {
-        font-size: 14px !important;
-
-        >a {
-          font-size: 17px !important;
-        }
-      }
-    }
-
-    &__footer {
-      .copyright {
-        font-size: 14px !important;
-      }
     }
   }
 
@@ -173,34 +159,32 @@
       max-width: 560px;
     }
 
+    &__hero {
+      h1 {
+        font-size: 34px !important;
+        letter-spacing: 0 !important;
+      }
+    }
+
     .section {
 
       &__title {
-        font-size: 31px !important;
+        font-size: 34px !important;
+        letter-spacing: 0 !important;
       }
 
 
       &__content {
-        font-size: 15px !important;
+        font-size: 16px !important;
+
+        .job__position, .project__name {
+          font-size: 17px !important;
+        }
 
         .skills,
         .project__description,
         .job__time,
         .job__detail {
-          font-size: 15px !important;
-        }
-      }
-    }
-
-    &__hero {
-      h1 {
-        font-size: 31px !important;
-      }
-
-      .buttons {
-        font-size: 14.5px !important;
-
-        >a {
           font-size: 16px !important;
         }
       }
@@ -214,75 +198,5 @@
       max-width: 480px;
     }
 
-    .section {
-
-
-      &__title {
-        font-size: 26px !important;
-      }
-    }
-
-    &__hero {
-      h1 {
-        font-size: 26px !important;
-        line-height: 2 !important;
-      }
-
-      .buttons {
-
-        >span {
-          margin: 0 10px !important;
-        }
-      }
-
-    }
-
-
   }
-
-
-
-  @media(max-width: 490px) {
-
-
-    &__footer {
-
-      &-contact {
-        justify-content: space-between !important;
-
-        >li {
-          font-size: 11px !important;
-          margin: 0 5px !important;
-
-          &:first-child {
-            margin-left: 0 !important;
-          }
-
-          &:last-child {
-            margin-right: 0 !important;
-          }
-        }
-      }
-    }
-  }
-
-  @media(max-width: 395px) {
-
-    &__skills {
-
-      .skills__category {
-
-        &:nth-child(2) {
-          margin-left: 0 !important;
-          margin-right: 0 !important;
-        }
-
-        &:last-child {
-          flex-grow: 1 !important;
-          margin: 0 auto !important;
-        }
-      }
-    }
-  }
-
 }
