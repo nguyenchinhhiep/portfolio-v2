@@ -25,10 +25,13 @@ export class HeaderCartComponent implements OnInit {
   }
 
   getCartAmount() {
-    this.cartAmount = this._ecommerceService.getCartItems().reduce((acc, curr)=> {
-      acc+=curr.quantity;
-      return acc;
-    },0);
+    if(this._ecommerceService.getCartItems()){
+      this.cartAmount = this._ecommerceService.getCartItems().reduce((acc, curr)=> {
+        acc+=curr.quantity;
+        return acc;
+      },0);
+    }
+    
   }
 
 }
