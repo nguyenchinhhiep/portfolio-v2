@@ -36,7 +36,7 @@ export class AuthService {
     loginFirebase(userContext: UserContextModel): Observable<Object> {
         return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB_pk91zkmcZcnR_H3lhDIBzU1dA8Z6TIU',
             {
-                email: userContext.username,
+                email: userContext.email,
                 password: userContext.password,
                 returnSecureToken: true
             }).pipe(

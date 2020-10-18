@@ -7,9 +7,19 @@
       font-size: 14px;
       cursor: pointer;
       font-weight: 600;
+
+        > a:hover, .account:hover {
+          color: #FC6514;
+        
+      }
   
       >a {
         display: block;
+      }
+
+      > .account {
+        font-size: 18px;
+        color: #B2BEC3;
       }
     }
   }

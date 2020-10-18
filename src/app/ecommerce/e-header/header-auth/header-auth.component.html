@@ -1,5 +1,12 @@
-<a (click)="open(auth)">Log In / Sign Up</a>
-
+<a *ngIf="!isAuthenticated" (click)="open(auth)">Log In / Sign Up</a>
+<div *ngIf="isAuthenticated" ngbDropdown class="account" container="body">
+    <a class="account__toggle" ngbDropdownToggle>
+        <i class="fas fa-user"></i>
+    </a>
+    <div ngbDropdownMenu class="account__dropdown">
+        <button ngbDropdownItem (click)="onLogout()">Log Out</button>
+    </div>
+</div>
 <ng-template #auth let-modal>
     <div class="modal-header border-bottom-0 p-2 px-3">
         <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">

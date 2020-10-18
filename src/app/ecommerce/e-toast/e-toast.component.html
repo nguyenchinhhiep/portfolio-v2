@@ -1,5 +1,5 @@
 <ngb-toast *ngFor="let toast of ecommerceService.toasts" [class]="toast.classname" [header]="toast.header"
-  [autohide]="true" [delay]="toast.delay || 1000" (hide)="ecommerceService.removeToast(toast)">
+  [autohide]="true" [delay]="toast.delay || 3000" (hide)="ecommerceService.removeToast(toast)">
   <ng-template [ngIf]="isTemplate(toast)" [ngIfElse]="text">
     <ng-template [ngTemplateOutlet]="toast.textOrTpl"></ng-template>
   </ng-template>

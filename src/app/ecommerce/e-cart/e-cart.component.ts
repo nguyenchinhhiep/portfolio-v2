@@ -40,7 +40,7 @@ export class ECartComponent implements OnInit {
   onRemoveItem(item) {
     this._ecommerceService.removeItemFromCart(item);
     this.getCartItems();
-    this._ecommerceService.showToast('Deleted successfully', { classname: 'bg-danger text-light p-2 font-weight-bold' });
+    this._ecommerceService.showToast('Removed successfully', { classname: 'bg-success text-light p-2 font-weight-bold' });
   }
 
   onChangeAmount(type: string, cartItem: CartItem) {

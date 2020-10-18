@@ -1,8 +1,9 @@
 import { ThrowStmt } from '@angular/compiler';
 import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from '../../auth.service';
+import { EcommerceService } from '../../ecommerce.service';
 
 @Component({
   selector: 'header-auth',
@@ -12,13 +13,18 @@ import { AuthService } from '../../auth.service';
 })
 export class HeaderAuthComponent implements OnInit {
   @HostBinding('attr.class') classes = 'header__auth';
-  constructor(private _modalService: NgbModal, private _fb: FormBuilder, private _authService: AuthService) { }
+  isAuthenticated: boolean = false;
+  modalRef: any;
+  constructor(private _modalService: NgbModal, private _fb: FormBuilder, private _authService: AuthService, private _ecommerceService: EcommerceService) { }
 
   isLogin: boolean = true;
   loginForm: FormGroup;
   signUpForm: FormGroup;
 
   ngOnInit(): void {
+    this._authService.firebaseUser.subscribe(user => {
+      this.isAuthenticated = !!user;
+    })
     this.createSignUpForm();
     this.createLoginForm();
   }
@@ -28,7 +34,8 @@ export class HeaderAuthComponent implements OnInit {
   }
 
   open(content) {
-    this._modalService.open(content, { centered: true, windowClass: 'auth-modal' }).result.then((result) => {
+    this.modalRef = this._modalService.open(content, { centered: true, windowClass: 'auth-modal' });
+    this.modalRef.result.then((result) => {
       this.isLogin = true;
     }, (reason) => {
       this.isLogin = true;
@@ -53,13 +60,22 @@ export class HeaderAuthComponent implements OnInit {
   }
 
   onLogin() {
-    console.log('Hello');
     this.loginForm.markAllAsTouched();
     if(!this.loginForm.valid) return;
-    console.log('Login')
+    this._ecommerceService.toggleLoader(true);
+    this._authService.loginFirebase(this.loginForm.value).subscribe(res => {
+      this._ecommerceService.showToast('Login Successful!', {classname: 'bg-success text-light p-2 font-weight-bold'});
+      this._ecommerceService.toggleLoader(false);
+      this.loginForm.reset();
+      this.modalRef.close();
+    });
   }
 
   onSignUp(){
+  
+  }
 
+  onLogout() {
+    this._authService.onLogoutFirebase();
   }
 }

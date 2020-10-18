@@ -8,6 +8,10 @@
       position: relative;
       color: #B2BEC3;
       margin-right: 10px;
+
+      &:hover > i {
+        color: #FC6514;
+      }
     }
   }
 

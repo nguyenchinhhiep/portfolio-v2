@@ -11,7 +11,7 @@ import { Product } from './models/product.model';
 export class EcommerceService {
     private _jsonURL = 'assets/json/db.json';
 
-    private _loading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(true);
+    private _loading: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
     loading$: Observable<boolean> = this._loading.asObservable();
 
     private _cartChange: Subject<boolean> = new Subject();
