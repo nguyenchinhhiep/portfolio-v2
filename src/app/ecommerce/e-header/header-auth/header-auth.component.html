@@ -18,40 +18,81 @@
             <h2 class="auth__title mb-3">Log in</h2>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" [ngClass]="{'border-danger': loginForm.get('email').invalid && (loginForm.get('email').touched || loginForm.get('email').dirty)}" id="email" formControlName="email">
-                <div class="feedback text-danger mt-2" *ngIf="loginForm.get('email').invalid && (loginForm.get('email').touched || loginForm.get('email').dirty)">
-                    <div *ngIf="loginForm.get('email').hasError('required')">This field is required</div>
-                    <div *ngIf="!loginForm.get('email').hasError('required') && loginForm.get('email').hasError('email')">Invalid email</div>
+                <input type="email" class="form-control"
+                    [ngClass]="{'border-danger': loginForm.get('email').invalid && (loginForm.get('email').touched || loginForm.get('email').dirty)}"
+                    id="email" formControlName="email">
+                <div class="feedback text-danger mt-2"
+                    *ngIf="loginForm.get('email').invalid && (loginForm.get('email').touched || loginForm.get('email').dirty)">
+                    <div *ngIf="loginForm.get('email').hasError('required')">This field is required.</div>
+                    <div
+                        *ngIf="!loginForm.get('email').hasError('required') && loginForm.get('email').hasError('email')">
+                        Invalid email.</div>
                 </div>
             </div>
             <div class="form-group">
                 <label for="password">Password</label>
-                <input type="password" [ngClass]="{'border-danger': loginForm.get('password').invalid && (loginForm.get('password').touched || loginForm.get('password').dirty)}" class="form-control" id="password" formControlName="password">
-                <div class="feedback text-danger mt-2" *ngIf="loginForm.get('password').invalid && (loginForm.get('password').touched || loginForm.get('password').dirty)">
-                    <div *ngIf="loginForm.get('password').hasError('required')">This field is required</div>
-                    <div *ngIf="!loginForm.get('password').hasError('required') && loginForm.get('password').hasError('minlength')">Password must be at least 6 characters</div>
+                <input type="password"
+                    [ngClass]="{'border-danger': loginForm.get('password').invalid && (loginForm.get('password').touched || loginForm.get('password').dirty)}"
+                    class="form-control" id="password" formControlName="password">
+                <div class="feedback text-danger mt-2"
+                    *ngIf="loginForm.get('password').invalid && (loginForm.get('password').touched || loginForm.get('password').dirty)">
+                    <div *ngIf="loginForm.get('password').hasError('required')">This field is required.</div>
+                    <div
+                        *ngIf="!loginForm.get('password').hasError('required') && loginForm.get('password').hasError('minlength')">
+                        Password must be at least 6 characters.</div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary mt-4 btn-block py-2 mb-3 font-weight-bold text-uppercase">Log In</button>
+            <button type="submit" class="btn btn-primary mt-4 btn-block py-2 mb-3 font-weight-bold text-uppercase">Log
+                In</button>
             <p class="mb-3">Don't have an account? <a class="text-info" (click)="onToggleAuth()">Sign Up</a></p>
         </form>
         <form id="sign-up" *ngIf="!isLogin" class="px-3" [formGroup]="signUpForm" (ngSubmit)="onSignUp()">
             <h2 class="auth__title mb-3">Sign Up</h2>
             <div class="form-group">
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" formControlName="email">
+                <input type="email" class="form-control"
+                    [ngClass]="{'border-danger': signUpForm.get('email').invalid && (signUpForm.get('email').touched || signUpForm.get('email').dirty)}"
+                    id="email" formControlName="email">
+                <div class="feedback text-danger mt-2"
+                    *ngIf="signUpForm.get('email').invalid && (signUpForm.get('email').touched || signUpForm.get('email').dirty)">
+                    <div *ngIf="signUpForm.get('email').hasError('required')">This field is required.</div>
+                    <div
+                        *ngIf="!signUpForm.get('email').hasError('required') && signUpForm.get('email').hasError('email')">
+                        Invalid email.</div>
+                </div>
             </div>
             <div class="password-group" formGroupName="passwordGroup">
                 <div class="form-group">
                     <label for="password">Password</label>
-                    <input type="password" class="form-control" id="password" formControlName="password">
+                    <input type="password"
+                        [ngClass]="{'border-danger': signUpForm.get('passwordGroup.password').invalid && (signUpForm.get('passwordGroup.password').touched || signUpForm.get('passwordGroup.password').dirty)}"
+                        class="form-control" id="password" formControlName="password">
+                    <div class="feedback text-danger mt-2"
+                        *ngIf="signUpForm.get('passwordGroup.password').invalid && (signUpForm.get('passwordGroup.password').touched || signUpForm.get('passwordGroup.password').dirty)">
+                        <div *ngIf="signUpForm.get('passwordGroup.password').hasError('required')">This field is
+                            required.</div>
+                        <div
+                            *ngIf="!signUpForm.get('passwordGroup.password').hasError('required') && signUpForm.get('passwordGroup.password').hasError('minlength')">
+                            Password must be at least 6 characters.</div>
+                    </div>
                 </div>
                 <div class="form-group">
                     <label for="confirm-password">Confirm password</label>
-                    <input type="password" class="form-control" id="confirm-password" formControlName="confirmPassword">
+                    <input type="password"
+                        [ngClass]="{'border-danger': signUpForm.get('passwordGroup.confirmPassword').invalid && (signUpForm.get('passwordGroup.confirmPassword').touched || signUpForm.get('passwordGroup.confirmPassword').dirty)}"
+                        class="form-control" id="confirm-password" formControlName="confirmPassword">
+                    <div class="feedback text-danger mt-2"
+                        *ngIf="signUpForm.get('passwordGroup.confirmPassword').invalid && (signUpForm.get('passwordGroup.confirmPassword').touched || signUpForm.get('passwordGroup.confirmPassword').dirty)">
+                        <div *ngIf="signUpForm.get('passwordGroup.confirmPassword').hasError('required')">This field is
+                            required.</div>
+                        <div *ngIf="!signUpForm.get('passwordGroup.confirmPassword').hasError('required') && signUpForm.get('passwordGroup.confirmPassword').hasError('confirmPasswordValidator')">
+                            Passsword and Confirm password didn't match.
+                        </div>
+                    </div>
                 </div>
             </div>
-            <button type="submit" class="btn btn-primary mt-4 btn-block py-2 mb-3 font-weight-bold text-uppercase">Sign Up</button>
+            <button type="submit" class="btn btn-primary mt-4 btn-block py-2 mb-3 font-weight-bold text-uppercase">Sign
+                Up</button>
             <p class="mb-3">Already have an account? <a class="text-info" (click)="onToggleAuth()">Log In</a></p>
         </form>
     </div>

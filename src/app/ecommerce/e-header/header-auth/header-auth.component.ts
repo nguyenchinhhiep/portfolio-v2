@@ -4,6 +4,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from '../../auth.service';
 import { EcommerceService } from '../../ecommerce.service';
+import { ConfirmPasswordValidator } from './confirm-password.validator';
 
 @Component({
   selector: 'header-auth',
@@ -54,25 +55,56 @@ export class HeaderAuthComponent implements OnInit {
       email: ['', [Validators.required, Validators.email]],
       passwordGroup: this._fb.group({
         password: ['', [Validators.required, Validators.minLength(6)]],
-        confirmPassword: ['', [Validators.required, Validators.minLength(6)]],
-      })
+        confirmPassword: ['', [Validators.required]],
+      },
+        {
+          validator: ConfirmPasswordValidator("password", "confirmPassword")
+        })
     })
   }
 
   onLogin() {
     this.loginForm.markAllAsTouched();
-    if(!this.loginForm.valid) return;
+    if (!this.loginForm.valid) return;
     this._ecommerceService.toggleLoader(true);
     this._authService.loginFirebase(this.loginForm.value).subscribe(res => {
-      this._ecommerceService.showToast('Login Successful!', {classname: 'bg-success text-light p-2 font-weight-bold'});
+      this._ecommerceService.showToast('Login Successful!', { classname: 'bg-success text-light p-2 font-weight-bold' });
       this._ecommerceService.toggleLoader(false);
       this.loginForm.reset();
       this.modalRef.close();
+    }, err => {
+      this._ecommerceService.toggleLoader(false);
+      this._ecommerceService.showToast(`${err}`, { classname: 'bg-danger text-light p-2 font-weight-bold' });
     });
   }
 
-  onSignUp(){
-  
+  onSignUp() {
+    this.signUpForm.markAllAsTouched();
+    if (!this.signUpForm.valid) return;
+    this._ecommerceService.toggleLoader(true);
+    const accountInfo = {
+      email: this.signUpForm.get('email').value,
+      password: this.signUpForm.get('passwordGroup.password').value
+    }
+
+    this._authService.registerFirebase(accountInfo).subscribe(res => {
+      this._ecommerceService.toggleLoader(false);
+      this.signUpForm.reset();
+      this._ecommerceService.showToast('Your account has been created successfully. You can login now.', { classname: 'bg-success text-light p-2 font-weight-bold'});
+      this.isLogin = true;
+    }, err => {
+      switch (err.error.error.message) {
+        case 'EMAIL_EXISTS':
+          this._ecommerceService.showToast('This email exists already!', { classname: 'bg-danger text-light p-2 font-weight-bold' });
+          break;
+        default:
+          this._ecommerceService.showToast('Unknown error. Please try again later!', { classname: 'bg-danger text-light p-2 font-weight-bold' });
+      }
+      this._ecommerceService.toggleLoader(false);
+      this.signUpForm.reset();
+    });
+
+
   }
 
   onLogout() {

@@ -6,7 +6,7 @@ import { catchError, tap } from 'rxjs/operators';
 import { FirebaseUserModel } from './models/firebase.model';
 
 export class UserContextModel {
-    username: string;
+    username?: string;
     password: string;
     email?: string;
     remember?: boolean;
@@ -33,6 +33,18 @@ export class AuthService {
     firebaseUser = new BehaviorSubject<FirebaseUserModel>(null);
     private tokenExpirationTimer: any;
     constructor(private http: HttpClient, private router: Router) { }
+
+
+    registerFirebase(userContext: UserContextModel): Observable<Object> {
+        return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyB_pk91zkmcZcnR_H3lhDIBzU1dA8Z6TIU', {
+            email: userContext.email,
+            password: userContext.password,
+            returnSecureToken: true
+        }).pipe(
+            catchError(err => throwError(err))
+        );
+    }
+
     loginFirebase(userContext: UserContextModel): Observable<Object> {
         return this.http.post<AuthResponseData>('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyB_pk91zkmcZcnR_H3lhDIBzU1dA8Z6TIU',
             {
