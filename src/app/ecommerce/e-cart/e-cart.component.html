@@ -1,81 +1,8 @@
-<ul ngbNav #nav="ngbNav" [(activeId)]="active" class="nav-tabs border-0">
-    <li [ngbNavItem]="1" class="flex-grow-1 text-center">
-        <a ngbNavLink class="px-0 py-3 bg-light">1. Shopping Cart</a>
-        <ng-template ngbNavContent>
-            <div *ngIf="cartItems.length > 0" class="row mx-0 mt-5">
-                <div class="col-12 cart__list mb-4 px-0">
-                    <table class="w-100 table table-bordered">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th></th>
-                                <th>Product</th>
-                                <th>Price</th>
-                                <th>Quantity</th>
-                                <th>Total</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr *ngFor = "let item of cartItems">
-                                <td class="item__action text-center"><button class="btn" (click)="onRemoveItem(item)"><i
-                                            class="fas fa-trash-alt"></i></button></td>
-                                <td class="item__img">
-                                    <img src="{{item.product.photos[0]}}"
-                                        alt="">
-                                </td>
-                                <td class="item__name">
-                                    {{item.product.name}}
-                                </td>
-                                <td class="item__price">
-                                    ${{item.product.price}}
-                                </td>
-                                <td class="item__quantity">
-                                    <div class="quantity-control d-flex justify-content-center">
-                                        <button class="btn btn-sm border rounded-0" (click)="onChangeAmount('desc', item)"><i class="fas fa-minus"></i></button>
-                                        <input onlyNumber type="text" class="border border-left-0 border-right-0" [(ngModel)]="item.quantity">
-                                        <button class="btn btn-sm border rounded-0" (click)="onChangeAmount('inc', item)"><i class="fas fa-plus"></i></button>
-                                    </div>
-                                </td>
-                                <td class="item__total">
-                                    ${{item.totalPrice}}
-                                </td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-                <div class="ml-auto cart__summary col-lg-5 px-0 bg-light rounded">
-                    <div class="d-flex justify-content-between align-items-center w-100 border-bottom p-3">
-                        <h3 class="mb-0">Subtotal</h3>
-                        <p class="total__price mb-0">${{subTotal}}</p>
-                    </div>  
-                    <div class="d-flex justify-content-between align-items-center w-100 p-3">
-                        <h3 class="mb-0">Total</h3>
-                        <p class="total__price mb-0">${{total}}</p>
-                    </div>
-                    <div class="px-3 mb-n5">
-                        <button class="btn-checkout btn btn-info btn-block btn-lg py-3">Proceed to Checkout</button>
-                    </div>
-
-                </div>
-            </div>
-
-            <div *ngIf="cartItems.length === 0" class="text-center py-5 cart-empty">
-                <p>Your cart is empty</p>
-                <a routerLink="../" class="btn btn-info mt-2">Continue Shopping</a>
-            </div>
-        </ng-template>
+<ul ngbNav class="nav-tabs border-0">
+    <li [ngbNavItem]="link.id" class="flex-grow-1 text-center" *ngFor="let link of links">
+        <a ngbNavLink [routerLink]="link.routerLink" class="px-0 py-3 bg-light">{{link.title}}</a>
     </li>
-    <li [ngbNavItem]="2" class="flex-grow-1 text-center" [disabled]="true">
-        <a ngbNavLink class="px-0 py-3 bg-light">2. Billing</a>
-        <ng-template ngbNavContent>
-
-        </ng-template>
-    </li>
-    <li [ngbNavItem]="3" class="flex-grow-1 text-center" [disabled]="true">
-        <a ngbNavLink class="px-0 py-3 bg-light">3. Payment</a>
-        <ng-template ngbNavContent>
-
-        </ng-template>
-    </li>
-</ul>
-<div [ngbNavOutlet]="nav" class="mb-5"></div>
+</ul> 
+<div class="my-5">
+    <router-outlet></router-outlet>
+</div>

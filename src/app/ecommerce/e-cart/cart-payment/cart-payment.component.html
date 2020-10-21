@@ -1,0 +1,12 @@
+<div class="row">
+    <div class="col-lg-6 mx-auto">
+        <h4 class="font-weight-bold mb-4">Select method</h4>
+        <form>
+            <div class="form-check ml-4" *ngFor="let payment of paymentMethods">
+                <input class="form-check-input" type="radio" name="paymentMethod" [id]="payment.value" [value]="payment.value">
+                <label class="form-check-label" for="{{payment.value}}">{{payment.label}}</label>
+            </div>
+            <button class="btn btn-block btn-info btn-lg font-weight-bold mt-4">Continue</button>
+        </form>
+    </div>
+</div>
