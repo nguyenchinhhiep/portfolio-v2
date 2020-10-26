@@ -1,4 +1,5 @@
 import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { EcommerceService } from '../ecommerce.service';
 
 @Component({
   selector: 'e-header',
@@ -8,9 +9,13 @@ import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core
 })
 export class EHeaderComponent implements OnInit {
   @HostBinding('attr.class') classes = 'ecommerce__header';
-  constructor() { }
+  constructor(private _ecommerceService: EcommerceService) { }
 
   ngOnInit(): void {
+  }
+
+  onClickLogo() {
+    this._ecommerceService.onLogoClick();
   }
 
 }

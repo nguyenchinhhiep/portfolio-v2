@@ -1,4 +1,7 @@
 import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { filter, map } from 'rxjs/operators';
 import { EcommerceService } from '../ecommerce.service';
 
 @Component({
@@ -9,7 +12,7 @@ import { EcommerceService } from '../ecommerce.service';
 })
 export class ECartComponent implements OnInit {
   @HostBinding('attr.class') classes = 'ecommerce__cart mt-5 d-block';
-  active = 1;
+  activeTab$: Observable<any>;
   links = [
     {
       id: 'list',
@@ -32,13 +35,17 @@ export class ECartComponent implements OnInit {
       routerLink: 'place-order'
     }
   ]
-  constructor(private _ecommerceService: EcommerceService) { }
+  constructor(private _ecommerceService: EcommerceService, private _router: Router) {
+    this.activeTab$ = this._router.events.pipe(filter((e): e is NavigationEnd => e instanceof NavigationEnd),
+      map(res => res.url.split('/')[res.url.split('/').length - 1]));
+  }
 
   ngOnInit(): void {
+
   }
 
 
-  
+
 
 
 }

@@ -15,17 +15,18 @@ export class EProductListComponent implements OnInit {
   products: Array<Product> = [];
   pageSize: number = 8;
   page: number = 1;
+
   constructor(private _ecommerceService: EcommerceService) { }
 
   ngOnInit(): void {
+    this._ecommerceService.logoClick$.subscribe(value => {
+      if (value) this.page = 1;
+    });
+    
     this._ecommerceService.getProducts().subscribe(products => {
       this.products = products;
     });
   }
 
-  handlePagination(products, page = 1, resPerpage = 8) {
-    const start = (page - 1) * resPerpage;
-    const end = page * resPerpage
-  }
 
 }

@@ -17,9 +17,16 @@ export class EcommerceService {
     private _cartChange: Subject<boolean> = new Subject();
     cartChange$: Observable<boolean> = this._cartChange.asObservable();
 
+    private _logoClick: Subject<boolean> = new Subject();
+    logoClick$: Observable<boolean> = this._logoClick.asObservable();
+
     toasts: any[] = [];
 
     constructor(private _http: HttpClient) {
+    }
+
+    onLogoClick() {
+        this._logoClick.next(true);
     }
 
     getProducts(): Observable<Array<Product>> {
