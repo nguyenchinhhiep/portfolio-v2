@@ -23,7 +23,7 @@ export class PortFooterComponent implements OnInit {
       {
         name: 'Facebook',
         link: 'https://www.facebook.com/hiepnguyen1003',
-        icon: 'fab fa-facebook-square'
+        icon: 'fab fa-facebook'
       },
       {
         name: 'Github',

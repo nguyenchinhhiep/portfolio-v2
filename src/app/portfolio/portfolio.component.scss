@@ -122,6 +122,13 @@
         font-size: 41px !important;
         line-height: 1.8 !important;
       }
+
+      .buttons {
+
+        >a {
+          font-size: 18px !important;
+        }
+      }
     }
   }
 
@@ -198,5 +205,26 @@
       max-width: 480px;
     }
 
+  }
+
+  @media(max-width: 480px) {
+
+    &__skills {
+
+
+      .skills {
+
+        &__category {
+          flex-basis: 50% !important;
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+
+          &:last-child {
+            flex-basis: 100% !important;
+          }
+        }
+        
+      }
+    }
   }
 }
