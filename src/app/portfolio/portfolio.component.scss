@@ -26,7 +26,7 @@
   }
 
   display: block;
-  font-family: 'Apercu',
+  font-family: 'Lato',
   sans-serif !important;
 
 
@@ -55,11 +55,10 @@
     &__title {
       font-family: 'Poppins', sans-serif;
       font-size: 53px;
-      font-weight: 700;
+      font-weight: bold;
       width: 100%;
       margin-bottom: 40px;
       flex-shrink: 0;
-      letter-spacing: 1px;
     }
   }
 
@@ -112,14 +111,14 @@
     .section {
 
       &__title {
-        font-size: 41px !important;
+        font-size: 43.3px !important;
       }
     }
 
     &__hero {
 
       h1 {
-        font-size: 41px !important;
+        font-size: 43.3px !important;
         line-height: 1.8 !important;
       }
 
@@ -148,13 +147,13 @@
     .section {
 
       &__title {
-        font-size: 36px !important;
+        font-size: 38px !important;
       }
     }
 
     &__hero {
       h1 {
-        font-size: 36px !important;
+        font-size: 38px !important;
       }
     }
 
