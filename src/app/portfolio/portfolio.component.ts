@@ -65,7 +65,7 @@ export class PortfolioComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   getTheme() {
-    const theme = localStorage.getItem('theme') || 'light';
+    const theme = localStorage.getItem('theme') || 'dark';
     this.portfolioService.setTheme(theme);
   }
 
