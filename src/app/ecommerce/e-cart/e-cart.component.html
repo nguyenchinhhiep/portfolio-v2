@@ -1,6 +1,6 @@
-<ul ngbNav class="nav-tabs border-0" [activeId]="activeTab$ | async">
-    <li [ngbNavItem]="link.id" class="flex-grow-1 text-center" *ngFor="let link of links">
-        <a ngbNavLink routerLink="{{link.routerLink}}" class="px-0 py-3 bg-light">{{link.title}}</a>
+<ul ngbNav class="nav nav-tabs nav-fill border-0">
+    <li class="flex-grow-1 text-center nav-item" *ngFor="let link of links">
+        <a routerLink="{{link.routerLink}}" routerLinkActive="active" class="px-0 py-3 bg-light nav-link disabled">{{link.title}}</a>
     </li>
 </ul> 
 <div class="my-5">
