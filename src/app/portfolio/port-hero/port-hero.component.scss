@@ -1,6 +1,7 @@
 .port {
 
   &__hero {
+    font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -16,7 +17,6 @@
       justify-content: center;
 
       >h1 {
-        font-family: 'Poppins', sans-serif;
         font-size: 54px;
         font-weight: bold;
         line-height: 1.5;
