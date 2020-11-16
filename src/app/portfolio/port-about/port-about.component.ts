@@ -14,7 +14,7 @@ export class PortAboutComponent implements OnInit {
 
    ngOnInit(): void {
       this.aboutMe = [
-         'I\'m currently a front-end web developer based in Ho Chi Minh City, VN. I have one year of experience with solid basic knowlegde in web development. I\'m a fast learner, able to learn new things by myself. I taught myself all knowledge about front-end web development without going to school.',
+         'I\'m currently a front-end web developer based in Ho Chi Minh City, VN. I have one year of experience with basic knowlegde in front-end web development. I\'m a quick learner, always willing to learn new skills in order to enhance my abilities. I taught myself all knowledge about front-end web development.',
          'As a front-end web developer, I am responsible for implementing visual elements that users see and interact with in a web application. Sometimes, I take website design files and convert them into HTML, JavaScript (JS) and/or CSS code. My focus is on user experiences.'
       ]
    }
