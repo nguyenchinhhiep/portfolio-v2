@@ -13,18 +13,22 @@ const routes: Routes = [
     {
         path: '',
         component: EcommerceComponent,
+        data: {title: 'eCommerce'},
         children: [
             {
                 path: '',
-                component: EProductListComponent
+                component: EProductListComponent,
+                data: {title: 'eCommerce'}
             },
             {
                 path: 'product-detail/:id',
-                component: EProductDetailComponent
+                component: EProductDetailComponent,
+                data: {title: 'eCommerce'}
             },
             {
                 path: 'cart',
                 component: ECartComponent,
+                data: {title: 'eCommerce'},
                 children: [
                     {
                         path: '',
@@ -32,19 +36,23 @@ const routes: Routes = [
                     },
                     {
                         path: 'list',
-                        component: CartListComponent
+                        component: CartListComponent,
+                        data: {title: 'eCommerce'}
                     },
                     {
                         path: 'shipping',
-                        component: CartShippingComponent
+                        component: CartShippingComponent,
+                        data: {title: 'eCommerce'}
                     },
                     {
                         path: 'payment',
-                        component: CartPaymentComponent
+                        component: CartPaymentComponent,
+                        data: {title: 'eCommerce'}
                     },
                     {
                         path: 'place-order',
-                        component: CartPlaceOrderComponent
+                        component: CartPlaceOrderComponent,
+                        data: {title: 'eCommerce'}
                     }
                 ]
             }

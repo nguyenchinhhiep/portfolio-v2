@@ -5,7 +5,8 @@ import { PortfolioComponent } from './portfolio.component';
 const routes: Routes = [
   {
     path: '',
-    component: PortfolioComponent
+    component: PortfolioComponent,
+    data: {title: 'Portfolio'}
   }
 ]
 
