@@ -52,8 +52,8 @@ export class HeaderAuthComponent implements OnInit {
 
   createLoginForm() {
     this.loginForm = this._fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
+      email: ['nguyenchinhhiep95@gmail.com', [Validators.required, Validators.email]],
+      password: ['123456', [Validators.required, Validators.minLength(6)]]
     })
   }
 
@@ -81,7 +81,7 @@ export class HeaderAuthComponent implements OnInit {
       this.modalRef.close();
     }, err => {
       this._ecommerceService.toggleLoader(false);
-      this._ecommerceService.showToast(`${err}`, { classname: 'bg-danger text-light p-2 font-weight-bold' });
+      this._ecommerceService.showToast(`Username or Password is incorrect`, { classname: 'bg-danger text-light p-2 font-weight-bold' });
     });
   }
 
