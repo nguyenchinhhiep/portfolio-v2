@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import { AuthService } from '../../auth.service';
 import { EcommerceService } from '../../ecommerce.service';
 import { CartItem } from '../../models/cart-item.model';
 
@@ -8,13 +10,16 @@ import { CartItem } from '../../models/cart-item.model';
   styleUrls: ['./cart-list.component.scss']
 })
 export class CartListComponent implements OnInit {
-
+  isAuthenticated: boolean = false;
   cartItems: Array<CartItem> = [];
   total: number;
   subTotal: number;
-  constructor(private _ecommerceService: EcommerceService) { }
+  constructor(private _ecommerceService: EcommerceService, private _authService: AuthService, private _route: ActivatedRoute, private _router: Router) { }
 
   ngOnInit(): void {
+    this._authService.firebaseUser.subscribe(user => {
+      this.isAuthenticated = !!user;
+    });
     this.getCartItems();
   }
 
@@ -47,6 +52,14 @@ export class CartListComponent implements OnInit {
     const quantity = cartItem.quantity;
     this._ecommerceService.updateQuantityCartItem(cartItem.product.id, quantity);
     this.getCartItems();
+  }
+
+  onProceedToCheckout() {
+    if(this.isAuthenticated){
+      this._router.navigate(['./../shipping'], { relativeTo: this._route });
+    } else {
+      this._ecommerceService.openAuthDialog();
+    }
   }
 
 }

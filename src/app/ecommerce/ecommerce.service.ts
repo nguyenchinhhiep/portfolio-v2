@@ -20,9 +20,16 @@ export class EcommerceService {
     private _logoClick: Subject<boolean> = new Subject();
     logoClick$: Observable<boolean> = this._logoClick.asObservable();
 
+    private _openAuthDialog: Subject<boolean> = new Subject();
+    openAuthDialog$: Observable<boolean> = this._openAuthDialog.asObservable();
+
     toasts: any[] = [];
 
     constructor(private _http: HttpClient) {
+    }
+
+    openAuthDialog() {
+        this._openAuthDialog.next(true);
     }
 
     onLogoClick() {

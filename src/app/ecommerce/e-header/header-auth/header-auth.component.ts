@@ -1,5 +1,5 @@
 import { ThrowStmt } from '@angular/compiler';
-import { Component, HostBinding, OnInit, ViewEncapsulation } from '@angular/core';
+import { Component, HostBinding, OnInit, TemplateRef, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbModal, NgbModalRef } from '@ng-bootstrap/ng-bootstrap';
 import { AuthService } from '../../auth.service';
@@ -13,6 +13,9 @@ import { ConfirmPasswordValidator } from './confirm-password.validator';
   encapsulation: ViewEncapsulation.None
 })
 export class HeaderAuthComponent implements OnInit {
+  @ViewChild('auth')
+  private modal: TemplateRef<any>;
+
   @HostBinding('attr.class') classes = 'header__auth';
   isAuthenticated: boolean = false;
   modalRef: any;
@@ -25,7 +28,11 @@ export class HeaderAuthComponent implements OnInit {
   ngOnInit(): void {
     this._authService.firebaseUser.subscribe(user => {
       this.isAuthenticated = !!user;
+    });
+    this._ecommerceService.openAuthDialog$.subscribe(value => {
+      if (value) this.open(this.modal);
     })
+    
     this.createSignUpForm();
     this.createLoginForm();
   }
